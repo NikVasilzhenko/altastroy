@@ -1,0 +1,56 @@
+.pagination{
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__link{
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $brs;
+    flex-shrink: 0;
+    font-size: 20px;
+    text-align: center;
+    line-height: 130%;
+    color: $clr-main;
+    &:hover{color: $clr-hover;}
+    &.active{
+      background-color: $clr-main;
+      color: $clr-contr;
+    }
+    &--arrow{      
+      border: 1px solid $clr-main;      
+      svg{
+        display: block;
+        stroke: $clr-main;
+        transition: .25s stroke;
+      }
+      &:hover{
+        border-color: $clr-hover;
+        svg{stroke: $clr-hover}
+      }
+      &.disabled{
+        opacity: .24;
+        cursor: default;
+        user-select: none;
+        pointer-events: none;
+      }
+      &:first-child{margin-right: 12px;}
+      &:last-child{margin-left: 12px;}
+    }
+  }
+  @media only screen and (max-width : 1023px){
+    &__wrap{display: none;}
+    &__more{width: 100%;}
+  }
+  @media only screen and (max-width : 767px){
+    margin-top: 24px;
+  }
+}

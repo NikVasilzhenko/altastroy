@@ -1,0 +1,182 @@
+.footer{
+  &__main{
+    background-color: $clr-contr;
+    padding: 48px 0
+  }
+  &__wrap{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3;
+  }
+  &__col{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  &-logo{
+    display: block;
+    width: 188px;
+  }
+  &__sec{
+    margin-top: 24px;
+    &:first-child{margin-bottom: 0;}
+  }
+  &__subtitle{
+    @include h5;
+    margin-bottom: 8px;
+  }
+  &-soc{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    li:not(:last-child){margin-right: 10px;}
+    &-item{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $clr-brd;
+      border-radius: $brs;
+      width: 40px;
+      height: 40px;
+      svg{
+        display: block;
+        fill: $clr-txt-sec;
+        opacity: .5;
+        transition: .25s opacity, .25s fill;
+      }
+      &:hover{
+        svg{
+          opacity: 1;
+          fill: $clr-contr;
+        }
+        border-color: transparent;
+      }
+      &.facebook:hover{background-color: #3B5998}
+      &.vk:hover{background-color: #4680C2;}
+      &.instagram:hover{background: radial-gradient(51.8% 49.8% at 36.25% 96.55%, #FFD600 0%, #FF6930 48.44%, #FE3B36 73.44%, rgba(254, 59, 54, 0) 100%), radial-gradient(182.65% 122.8% at 84.5% 113.5%, #FF1B90 24.39%, #F80261 43.67%, #ED00C0 68.85%, #C500E9 77.68%, #7017FF 89.32%);}
+      &.ok:hover{background-color: #FF8800;}
+    }    
+  }
+  &-nav{
+    margin-bottom: 32px;
+    &:last-child{margin-bottom: 0;}
+    &-title{
+      @include h5;
+      display: inline-block;
+      color: $clr-txt;
+      margin-bottom: 24px;
+      &:last-child{margin-bottom: 0;}
+      &:hover{color: $clr-main;}
+    }
+    ul{
+      li{
+        margin-bottom: 16px;
+        &:last-child{margin-bottom: 0;}
+        a{
+          @include txt-sm;
+          color: $clr-txt;
+          &:hover{color: $clr-main;}
+        }
+      }
+    }
+  }
+  &-contact{
+    @include txt-sm;
+    color: $clr-txt-sec;
+    margin: 12px 0;
+    address{font-style: normal;}
+  }
+  &-tel{
+    margin-bottom: 4px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: $clr-txt;
+    &:hover{color: $clr-main;}
+  }
+  &-mail{
+    color: $clr-main;
+    text-decoration: underline;
+    &:hover{text-decoration: none;}
+  }
+  &__row{
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-copyright{
+    @include txt-sm;
+    color: $clr-txt;
+  }
+  &-politic{
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li:not(:first-child){margin-left: 12px;}
+      a{
+        @include txt-sm;
+        color: $clr-txt;
+        text-decoration: underline;
+        &:hover{color: $clr-main;}
+      }
+    }
+  }
+  @media only screen and (max-width : 1023px){
+    &__main{padding: 32px 0;}
+    &__wrap{display: block;}
+    &__col{
+      flex-direction: row;
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4){display: none;}
+      &:not(:last-child){margin-bottom: 32px;}
+    }
+    &__sec{margin-top: 0;}
+    &-nav{display: none;}
+    &-contact{ margin: 0;}
+    &__row{padding-bottom: 90px;}
+    &__links{
+      flex-grow: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      &:before{
+        content: '';
+        display: block;
+        width: 1px;
+        height: 100%;
+      }
+    }
+    &-btn{display: none;}
+  }
+  @media only screen and (max-width : 767px){
+    &__col{
+      flex-direction: column;
+      align-items: center;
+      &:not(:last-child){margin-bottom: 24px;}
+    }
+    &__sec{margin-top: 24px;}
+    &-contact{ margin-bottom: 16px;}
+    &__row{
+      display: block;
+      text-align: center;
+    }
+    &__subtitle{margin-bottom: 16px;}
+    &__links{
+      flex-direction: column;
+      align-items: center;
+      &:before{display: none;}
+    }
+    &-btn{display: block;}
+    &-copyright{
+      margin-bottom: 16px;
+      span{display: block;}
+    }
+  }
+}

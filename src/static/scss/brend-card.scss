@@ -1,0 +1,27 @@
+.brend-card{
+  padding: 24px 16px;
+  background-color: $clr-contr;
+  border-radius: $brs;
+  font-size: 24px;
+  line-height: 29px;
+  color: $clr-main;
+  text-align: center;
+  &:hover{color: $clr-hover;}
+  &__img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    height: 102px;
+    img{max-height: 100%;}
+  }
+  @media only screen and (max-width : 767px){
+    padding: 16px;
+    font-size: 16px;
+    line-height: 19px;
+    &__img{
+      margin-bottom: 16px;
+      height: 60px;
+    }
+  }
+}

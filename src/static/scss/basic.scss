@@ -1,0 +1,307 @@
+/*baisic*/
+html{
+  -webkit-locale: "ru-RU";
+  direction: ltr;
+  unicode-bidi: isolate;
+  min-height: 100%;
+}
+html, body{
+  min-height: 100%;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  font: 400 16px/1.2 $font-main;
+  color: $clr-txt;
+  background: $clr-bg;
+  min-width: 310px; 
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  opacity: 1;
+  -moz-font-feature-settings: 'kern';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+}
+
+/*clearfix*/
+.clearfix{
+  zoom: 1;
+  &:before,
+  &:after{
+    content: '';
+    display: table;
+  }
+  &:after{clear: both;}
+}
+
+/*visually hidden*/
+.visually-hidden{
+  position: absolute;
+  visibility: 1px;
+  height: 1px;
+  margin: -1px;
+  border: none;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*box-sizing*/
+*, *:before, *:after, input[type="search"]{
+  box-sizing: border-box;
+}
+
+/*buttons*/
+.btn{
+  @include btn-reset;
+  &--ghos{
+    display: flex;
+    align-items: center;
+    color: $clr-main;
+    svg{
+      @include svg;
+      stroke: $clr-main;
+    }
+    &:hover{
+      color: $clr-hover;
+      svg{stroke: $clr-hover;}
+    }
+    &--lg{
+      font-size: 20px;
+      line-height: 160%;
+      svg{
+        margin-left: 10px;
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+  &--primery{
+    padding: 17px 44px;
+    border-radius: $brs;
+    background-color: $clr-main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min-conent;
+    font-size: 16px;
+    line-height: 160%;
+    color: $clr-contr;
+    &:hover{background-color: $clr-hover;}
+  }
+}
+
+
+
+/*layout*/
+.wrapper{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;	
+}
+.container{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1500px;
+  @media only screen and (max-width : 1023px){
+    padding: 0 16px;
+  }
+}
+
+/*typographyc*/
+ol,ul,li,h1,h2,h3,h4,h5,h6,p,q,figure,figcaption,blockquote,cite,fieldset,hr{    
+  margin:0;
+  padding: 0;    
+  border: none;
+}
+ul li, ol li{list-style: none;}
+a{
+  text-decoration: none;
+  outline: none;
+  transition: .25s ease;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  &:-moz-any-link:focus ,
+  &:-moz-focusring,
+  &::-moz-focus-inner,
+  &::-moz-focus-outer{
+    outline: 0!important;
+    outline: none;
+  }
+  &:active {outline: none;}
+  &[href^="tel:"],
+  &[href^="mailto:"]{white-space: nowrap;}
+}
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/*form*/
+.input{
+  @include input-reset;
+  background-color: $clr-contr;
+  border: 1px solid $clr-brd;
+  border-radius: $brs;
+  color: $clr-txt;
+  font-size: 14px;
+  height: 60px;
+  padding: 0 15px;
+  /*placeholder*/
+  &::-webkit-input-placeholder{opacity: 1; color: $clr-placeholder;}
+  &::-moz-placeholder{opacity: 1; color: $clr-placeholder;}
+  &:-moz-placeholder{opacity: 1; color: $clr-placeholder;}
+  &:-ms-input-placeholder{opacity: 1; color: $clr-placeholder;}
+  &:placeholder{opacity: 1;color: $clr-placeholder;}
+  /*webkit autocomplit input*/
+  &:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 100px $clr-contr !important;
+    -webkit-text-fill-color: $clr-txt !important;
+    color: $clr-txt !important;
+  }
+  &:focus{border-color: $clr-main;}
+  &.error{border-color: $clr-alert;}
+  //{outline: 5px solid rgba(69, 89, 153, .24);}
+}
+.fieldset{
+  @include fieldset-reset;
+}
+.textarea{
+  /*reset*/
+  @include textarea-reset; 
+  @extend .input;
+  /*my styles*/
+  
+}
+.input:focus:required:valid,
+.textarea:focus:required:invalid{color: $clr-txt;}
+.input:required:valid,
+.textarea:required:valid{color: $clr-txt;}
+
+//sec
+.sec{
+  padding: 100px 0;
+  @media only screen and (max-width : 767px){padding: 50px 0;}
+}
+.sec--white{background-color: $clr-contr;}
+.sec--white-to-grey{
+  padding: 0;
+  background: linear-gradient(to bottom, $clr-contr 0%,$clr-contr 50%,$clr-bg 50%,$clr-bg 100%);
+}
+.sec--grey-to-white{
+  padding: 0;
+  background: linear-gradient(to bottom, $clr-bg 0%,$clr-bg 50%,$clr-contr 50%,$clr-contr 100%);
+}
+.sec-title{
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 130%;
+  color: $clr-txt;
+  position: relative;
+  padding-top: 16px;
+  &::before{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 76px;
+    background-color: $clr-main;
+  }
+  @media only screen and (max-width : 767px){
+    font-size: 36px;
+  }
+}
+.sec-txt{
+  @include txt-lg;
+  color: $clr-txt-sec;
+  margin-top: 24px;
+  @media only screen and (max-width : 767px){
+    @include txt-sm;
+  }
+}
+.sec-header{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  @media only screen and (max-width : 1023px){
+    .more-link{display: none;}
+  }
+}
+.more-link{
+  white-space: nowrap;
+  padding: 12px 0;
+  font-size: 20px;
+  line-height: 160%;
+  color: $clr-main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg{
+    stroke: $clr-main;
+    display: block;
+    margin-left: 10px;
+    transition: stroke .25s;
+  }
+  &:hover{
+    color: $clr-hover;
+    svg{stroke: $clr-hover;}
+  }
+}
+
+//page
+.page{
+  padding-bottom: 100px;
+  &-header{
+    margin-bottom: 48px;
+    &__wrap{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }    
+  }
+  &-title{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 130%;
+  }
+  @media only screen and (max-width : 767px){
+    &-title{font-size: 28px;}
+  }
+}
+
+//grid
+.grid{
+  display: grid;  
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  align-items: stretch;
+  &--4{grid-template-columns: repeat(4, 1fr);}  
+  @media only screen and (max-width : 1299px){
+    &--4{grid-template-columns: repeat(3, 1fr);} 
+  }
+  @media only screen and (max-width : 1023px){
+    &--4{grid-template-columns: repeat(2, 1fr);} 
+  }
+  @media only screen and (max-width : 767px){
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+  }
+}
+
+
+
+
+
+
+
+
+

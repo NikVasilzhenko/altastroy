@@ -1,0 +1,15 @@
+.hero{
+  padding: 24px 0;
+  background-color: $clr-contr;
+  picture{
+    overflow: hidden;
+    display: block;
+    border-radius: $brs;
+  }
+  .slider__footer{margin-top: 24px;}
+  @media only screen and (max-width : 767px){
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    picture{border-radius: 0;}
+  }  
+}

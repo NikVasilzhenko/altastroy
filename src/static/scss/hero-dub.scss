@@ -1,0 +1,47 @@
+.hero-dub{
+  background-color: $clr-contr;
+  padding: 24px 0;
+  picture{
+    overflow: hidden;
+    display: block;
+    border-radius: $brs;
+  }
+  .slider{
+    position: relative;
+    overflow: hidden;
+    &::before{
+      content: '';
+      display: block;
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 76px;
+      width: 170px;
+      background: linear-gradient(270deg, $clr-contr 0%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+  &-slider{
+    width: 1090px;
+    margin: 0;
+    overflow: visible;
+  }
+  .slider__footer{margin-top: 24px;}
+  @media only screen and (max-width : 1479px){
+    .slider{
+      &::before{width: 222px;}
+    }
+    &-slider{width: 818px;}
+  }
+  @media only screen and (max-width : 1279px){
+    .slider{
+      &::before{display: none;}
+    }
+    &-slider{width: 100%;}
+  }
+  @media only screen and (max-width : 767px){
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    picture{border-radius: 0;}
+  }
+}

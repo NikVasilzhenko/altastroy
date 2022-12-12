@@ -1,0 +1,9 @@
+.banner{
+  border-radius: $brs;
+  overflow: hidden;
+  @media only screen and (max-width : 767px){
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    border-radius: 0;
+  }
+}

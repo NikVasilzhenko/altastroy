@@ -1,0 +1,34 @@
+//библиотеки и плагины
+@import "vendors.scss";
+
+//шрифты
+@import "fonts.scss";
+
+//переменный и миксины
+@import "_vars.scss";
+@import "_mix.scss";
+
+//базовые глобальные стили
+@import "basic.scss";
+
+//модули
+@import "banner.scss";
+@import "breadcrumbs.scss";
+@import "brend-card.scss";
+@import "categorys.scss";
+@import "desctop-catalog.scss";
+@import "footer.scss";
+@import "header.scss";
+@import "hero.scss";
+@import "hero-dub.scss";
+@import "item.scss";
+@import "mob-popup.scss";
+@import "pagination.scss";
+@import "search.scss";
+@import "slider.scss";
+@import "subscribe.scss";
+
+
+
+
+

@@ -1,0 +1,69 @@
+.subscribe{
+  position: relative;
+  z-index: 2;
+  &__wrap{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -100px;
+      left: -132px;
+      background: url(../img/svg/subscribe-bg.svg) 0 0 no-repeat;
+      background-size: contain;
+      width: 882px;
+      height: 518px;
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+  &__main{width: 354px;}
+  @media only screen and (max-width : 1023px){
+    &__main{margin-bottom: 24px;}
+    &__wrap{display: block;}
+  }
+  @media only screen and (max-width : 600px){
+    &__main{margin-bottom: 42px;}
+  }
+}
+.subscribe-form{
+  flex-grow: 1;
+  margin-left: 24px;
+  max-width: 655px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__sub{
+    @include txt-sm;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 12px;
+    color: $clr-txt-sec;
+    a{
+      color: $clr-main;
+      text-decoration: underline;
+      &:hover{text-decoration: none;}
+    }
+  }
+  &__input{margin-right: 10px;}
+  @media only screen and (max-width : 1023px){
+    margin-left: 0;
+  }
+  @media only screen and (max-width : 600px){
+    display: block;
+    &__sub{
+      position: static;
+      margin-top: 12px;
+    }
+    &__input{
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    &__submit{width: 100%;}
+  }
+}

@@ -1,0 +1,187 @@
+.slider{
+  position: relative;
+  &__footer{
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-nav{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &-btn{
+      svg{display: none;}
+    }
+    &--mob-show{display: none;}
+  }
+  &-arrow{
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: $brs;
+    border: 1px solid $clr-main;
+    flex-shrink: 0;
+    svg{
+      display: block;
+      stroke: $clr-main;
+      transition: .25s stroke;
+    }
+    &:hover{
+      border-color: $clr-hover;
+      svg{stroke: $clr-hover}
+    }
+    &.swiper-button-disabled{
+      opacity: .24;
+      cursor: default;
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+  &-pagination{
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .swiper-pagination-bullet{
+      width: 30px;
+      margin-left: 10px;
+      height: 1px;
+      opacity: .5;
+      background-color: $clr-main;
+      border-radius: 0;
+      cursor: pointer;
+      margin: 0;
+      &:hover{background-color: $clr-hover;}
+    }
+    .swiper-pagination-bullet-active{
+      background-color: $clr-hover;
+      height: 4px;
+      cursor: default;
+      opacity: 1;
+    }
+  }
+  &-filter{
+    overflow: hidden;
+    margin-bottom: 24px;
+    position: relative;
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 60px;
+      background: linear-gradient(270deg, $clr-bg 0%, rgba(247, 247, 251, 0) 100%);      
+      z-index: 10;
+    }
+    &__wrap{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      overflow-x: auto;    
+      &::-webkit-scrollbar{display: none;}    
+      &::-webkit-scrollbar-track{display: none;}    
+      &::-webkit-scrollbar-thumb{display: none;} 
+    }
+    &__slider{
+      width: 100%;
+      .swiper-slide{width: auto;}
+    }
+    &__item{
+      flex-shrink: 0;
+      padding: 8px 12px;
+      border-radius: $brs;
+      font-size: 14px;
+      line-height: 17px;
+      white-space: nowrap;
+      color: $clr-txt;
+      border: 1px solid transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+        width: 22px;
+        flex-shrink: 0;
+        margin-right: 6px;
+      }
+      &:hover{color: $clr-main;}
+      &.active{
+        border-color: $clr-main;
+        color: $clr-main;
+      }
+    }
+  }
+  @media only screen and (max-width : 1023px){
+    &__footer{
+      justify-content: center;
+      &-nav{
+        &:not(.slider__footer-nav--mob-show){display: none;}
+        justify-content: center;
+        flex-grow: 1;
+      }
+      &-btn{
+        svg{
+          display: block;
+          margin-left: 12px;
+          stroke: $clr-contr;
+        }
+      }
+      &--mob-show{display: flex;}
+    }
+    &-arrow{display: none;}
+    &-pagination{
+      &:not(.slider-pagination--hero){display: none;}
+      margin-left: 0;
+      justify-content: center;
+      .swiper-pagination-bullet:first-child{margin-left: 0;}
+    }
+  }
+  @media only screen and (max-width : 767px){
+    &__footer{
+      &-btn{width: 100%;}
+    }
+  }
+}
+.sec--white .slider-filter::before{background: linear-gradient(270deg, $clr-contr 0%, rgba(255, 255, 255, 0) 100%);}
+.slider-btn{
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $brs;
+  border: 1px solid $clr-main;
+  svg{
+    @include svg;
+    stroke: $clr-main;
+  }
+  &:hover{
+    border-color: $clr-hover;
+    svg{stroke: $clr-hover;}
+  }
+  &.swiper-button-disabled{
+    cursor: default;
+    opacity: .24;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+.carusel{
+  @media only screen and (max-width : 1279px){
+    overflow: visible;
+    &.carusel--3{
+      .swiper-slide{width: 347px;}
+    }
+  }
+  @media only screen and (max-width : 767px){
+    &.carusel--3{
+      .swiper-slide{width: 320px;}
+    }
+  }
+}
