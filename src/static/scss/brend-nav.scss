@@ -1,0 +1,86 @@
+.brend-nav{
+  background-color: $clr-contr;
+  border-radius: $brs;
+  padding: 0 24px;
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 0;
+  }
+  &__logo{
+    display: block;
+    width: 160px;
+  }
+  &__footer{
+    display: none;
+    padding-bottom: 24px;
+  }
+  &__sec{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 48px 0;
+    border-top: 1px solid $clr-brd;
+  }
+  &__title{
+    width: 20%;
+    padding-right: 24px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+  }
+  &__nav{
+    width: 75%;
+    column-count: 4;
+    column-gap: 24px;
+    a{
+      display: block;
+      width: fit-content;
+      break-inside: avoid;
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 160%;
+      text-decoration: underline;
+      color: $clr-txt;
+      &:hover{color: $clr-main;}
+    }
+  }
+  &__more{
+    display: block;
+    width: max-content;
+    break-inside: avoid;
+    font-size: 16px;
+    line-height: 160%;
+    color: $clr-main;
+    &:hover{color: $clr-hover;}
+    & ~ a{display: none;}
+  }
+  @media only screen and (max-width : 1199px){
+    &__sec{display: block;}
+    &__title{
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 24px;
+    }
+    &__nav{width: 100%;}
+  }
+  @media only screen and (max-width: 1023px){
+    &__nav{column-count: 3;}
+  }
+  @media only screen and (max-width : 767px){
+    padding: 0 16px;
+    &__header{
+      justify-content: center;
+      padding: 24px 0;
+      .more-link{display: none;}
+    }
+    &__footer{display: block;}
+    &__btn{width: 100%;}
+    &__sec{padding: 24px 0;}
+    &__nav{
+      column-count: 2;
+      a{margin-bottom: 12px;}
+    }
+  }
+}

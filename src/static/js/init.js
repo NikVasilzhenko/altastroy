@@ -80,6 +80,36 @@ document.querySelectorAll('.js-carusel-4').forEach(function(elem) {
   });
 });
 
+//carusel fluid
+document.querySelectorAll('.js-carusel-fluid').forEach(function(elem) {
+  var carusel4 = new Swiper(elem, {
+    slidesPerView: 'auto',
+    spaceBetween: 8,
+    navigation: {
+      nextEl: elem.nextElementSibling.querySelector('.js-carusel-next'),
+      prevEl: elem.nextElementSibling.querySelector('.js-carusel-prev'),
+    },
+    pagination: {
+      el: elem.nextElementSibling.querySelector('.js-carusel-pagination'),
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+      },
+      1280: {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+      },
+      1365: {
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+      },
+    },
+  });
+});
+
 //item
 document.querySelectorAll('.js-item-pic').forEach(function(elem) {
   if( elem.querySelectorAll('.swiper-slide').length <= 1){

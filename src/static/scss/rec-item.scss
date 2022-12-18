@@ -1,0 +1,98 @@
+.rec-item{
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+  &__pic{
+    display: block;
+    width: 100%;
+    padding-top: 83%;
+    position: relative;
+    overflow: hidden;
+    border-radius: $brs;
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      max-width: unset;
+      object-fit: cover;
+    }
+  }
+  &__main{
+    margin-top: 16px;
+    flex-grow: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  &__txt{
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 130%;
+    color: $clr-txt;
+    &:hover{color: $clr-main;}
+  }
+  .more-link{justify-content: flex-start;}
+  @media only screen and (max-width : 767px){
+    &__main{margin-top: 12px;}
+    &__txt{
+      font-size: 16px;
+      line-height: 150%;
+    }
+    .more-link{
+      font-size: 14px;
+      justify-content: center;
+      svg{
+        width: 16px;
+        height: 16px;
+        margin-left: 6px;
+      }
+    }
+  }
+}
+.row-mode{
+  .rec-item{
+    min-height: 160px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $clr-contr;
+    border-radius: $brs;
+    &__pic{
+      width: 240px;
+      padding-top: 0;
+      height: 100%;
+      border-radius: $brs 0 0 $brs;
+    }
+    &__main{
+      margin-top: 0;
+      padding: 24px;
+    }
+    &__txt{margin-bottom: 0;}
+    .more-link{justify-content: flex-start;}
+    @media only screen and (max-width : 767px){
+      flex-direction: column;
+      align-items: stretch;
+      &__pic{
+        width: 100%;
+        padding-top: 60%;
+        height: auto;
+        border-radius: $brs $brs 0 0;
+      }
+      &__main{
+        margin-top: 0;
+        padding: 12px;
+      }
+      &__txt{
+        font-size: 20px;
+        line-height: 150%;
+      }
+      .more-link{justify-content: flex-start;}
+    }
+  }
+}

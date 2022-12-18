@@ -1,0 +1,39 @@
+.brend-header{
+  margin-bottom: 48px;
+  position: relative;
+  &__bg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 300px;
+    picture, img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: unset;
+      object-fit: cover;
+    }
+  }
+  &__logo{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 314px;
+    img{width: 100%;}
+  }
+  @media only screen and (max-width : 1299px){
+    &__bg{height: 200px;}
+    &__logo{width: 210px;}
+  }
+  @media only screen and (max-width : 1199px){
+    &__bg{height: 160px;}
+    &__logo{width: 168px;}
+  }
+  @media only screen and (max-width : 767px){
+    &__bg{height: 82px;}
+    &__logo{width: 86px;}
+  }
+}

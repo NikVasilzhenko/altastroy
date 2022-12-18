@@ -1,0 +1,31 @@
+.seo .seo-text{
+  margin-top: 48px;
+}
+.seo-text{
+  @include txt-lg;
+  p{
+    margin: 1.5em 0;
+    &:last-child{margin-bottom: 0;}
+  }
+  &__hide{
+    display: none;
+    border: 1px solid transparent;
+    border-left: none;
+    border-right: none;
+  }
+  &__more{
+    transition: color .25s;
+    &.open{
+      svg{transform: rotate(180deg);}
+      font-size: 0;
+      &::before{
+        content: 'Свернуть';
+        font-size: 16px;
+        line-height: 160%;
+      }
+    }
+  }
+  @media only screen and (max-width : 767px){
+    @include txt;
+  }
+}
