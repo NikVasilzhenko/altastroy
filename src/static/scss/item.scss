@@ -4,6 +4,10 @@
   overflow: hidden;
   border-radius: $brs;
   position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
   &__pic{
     position: relative;
     padding-bottom: 4px;
@@ -72,7 +76,7 @@
     z-index: 16;
     top: 16px;
     left: 16px;
-  }
+  }  
   &__flag{
     width: 48px;
     margin-bottom: 6px;
@@ -91,8 +95,13 @@
     margin-left: 12px;
   }
   &__desc{
+    flex-grow: 1;
     position: relative;
     padding: 12px 16px 16px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: column;
   }
   &__tools{
     position: absolute;
@@ -157,6 +166,7 @@
   }
   &__options{
     margin-top: 12px;
+    flex-grow: 1;
     .item__row{justify-content: space-between;}
   }
   &__name{
@@ -290,6 +300,119 @@
     left: 22px;
     top: -10px;
   }
+  &__check{
+    position: absolute;
+    z-index: 16;
+    top: 16px;
+    left: 16px;
+    &-box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      background-color: $clr-confirm;
+      border: 1px solid $clr-confirm;
+      border-radius: 4px;
+    }
+    &-val{
+      position: absolute;
+      left: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 2px 8px;
+      white-space: nowrap;
+      background-color: $clr-alert;
+      border-radius: 4px;
+      color: $clr-contr;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: .1em;
+    }
+  }
+  &__add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid $clr-edit;
+    border-radius: 4px;
+    svg{
+      display: block;
+      fill: $clr-edit;
+      transition: fill .25s;
+    }
+    &:hover{
+      background-color: $clr-edit;
+      svg{fill: $clr-contr;}
+    }
+  }
+  &__prinery-btn,
+  &__secondary-btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: $brs;
+    img{
+      width: 22px;
+      margin-right: 12px;
+    }
+  }
+  &__prinery-btn{
+    background-color: $clr-main;
+    color: $clr-contr;
+  }
+  &__secondary-btn{
+    border: 1px solid $clr-main;
+    color: $clr-main;
+    &:hover{
+      background-color: $clr-main;
+      color: $clr-contr;
+    }
+  }
+  &--short{
+    flex-direction: row;
+    height: auto;
+    border: 1px solid $clr-brd;
+    margin-bottom: 16px;
+    &:last-child{margin-bottom: 0;}
+    .item__main{
+      width: 208px;
+      min-height: 208px;
+      padding: 16px;
+    }
+    .item__pic{
+      height: 100%;
+      padding-bottom: 0;
+    }
+    .item__pic .swiper-slide{padding: 0 0 10px;}
+    .item__pic .swiper-wrapper .swiper-slide a{
+      padding-top: 0;
+      height: 100%;
+    }
+    .item__desc{width: 100%;}
+    .item__pagination{
+      bottom: 0 !important;
+      left: 0;
+      padding: 0;
+    }
+    .item__name{font-size: 18px;}
+    .item__price{
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      min-height: unset;
+    }
+    .item__price-row{margin-bottom: 0;}
+    .item__prinery-btn{margin-top: 8px;}
+  }
   @media only screen and (max-width : 1299px){
     &__tool{
       &.fast-view{display: none;}
@@ -339,6 +462,62 @@
         background-color: transparent;
       }
       &-val{font-size: 14px;}
+    }
+    &__check{
+      top: 8px;
+      left: 8px;
+      &-box{
+        width: 19px;
+        height: 19px;
+        img{width: 15px;}
+      }
+      &-val{
+        left: 25px;
+        padding: 2px 4px;
+        font-size: 10px;
+      }
+    }
+    &__add{
+      width: 19px;
+      height: 19px;
+      svg{
+        width: 15px;
+        height: 15px;
+      }
+    }
+    &__prinery-btn,
+    &__secondary-btn{
+      img{margin-right: 6px;}
+    }
+    &--short{
+      width: 100%;
+      margin-bottom: 8px;
+      position: relative;
+      padding-bottom: 50px;
+      &:last-child{margin-bottom: 0;}
+      .item__main{
+        width: 130px;
+        min-height: 130px;
+        padding: 12px;
+      }
+      .item__desc{padding-top: 12px;}
+      .item__name{font-size: 14px;}
+      .item__tools{
+        position: absolute;
+        right: 12px;
+      }
+      .item__row{
+        line-height: 24px;
+        margin-bottom: 6px;
+      }
+      .item__prinery-btn{
+        margin-top: 0;
+        position: absolute;
+        top: 100%;
+        right: 12px;
+        margin-top: 0;
+        width: calc(100vw - 32px - 24px);
+      }
     }
   }
 }

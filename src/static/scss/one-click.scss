@@ -1,0 +1,112 @@
+.one-click{
+  &__card{margin-bottom: 24px;}
+  &__thead{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 6px;
+    border-bottom: 1px solid $clr-brd;
+  }
+  &__th{
+    font-size: 14px;
+    line-height: 160%;
+    color: $clr-txt-sec;
+    padding-right: 12px;
+    &:nth-child(1){flex-grow: 1;}
+    &:nth-child(2){width: 70px; flex-shrink: 0;}
+    &:nth-child(3){width: 120px; flex-shrink: 0;}
+    &:nth-child(4){
+      width: 80px;
+      text-align: right;
+      padding-right: 0;
+      flex-shrink: 0;
+    }
+  }
+  &__tr{
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 6px;
+    border-bottom: 1px solid $clr-brd;
+  }
+  &__td{
+    padding-right: 12px;    
+    &:nth-child(1){flex-grow: 1;}
+    &:nth-child(2){width: 70px; flex-shrink: 0;}
+    &:nth-child(3){width: 120px; flex-shrink: 0;}
+    &:nth-child(4){
+      width: 80px;
+      text-align: right;
+      padding-right: 0;
+      flex-shrink: 0;
+    }
+    &-title{
+      display: none;
+      font-size: 14px;
+      line-height: 160%;
+      color: $clr-txt-sec;
+    }
+    &-price{
+      font-size: 14px;
+      line-height: 130%;
+      white-space: nowrap;
+    }
+    &-summ{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 130%;
+      white-space: nowrap;
+    }
+  }
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &-pic{
+      width: 60px;
+      margin-right: 12px;
+      flex-shrink: 0;
+      border-radius: $brs;
+      overflow: hidden;
+    }
+    &-name{
+      font-size: 14px;
+      line-height: 130%;
+      color: $clr-main;
+      &:hover{color: $clr-hover;}
+    }
+  }
+  &__count{
+    padding-top: 6px;
+    text-align: right;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+  }
+  @media only screen and (max-width : 767px){
+    &__card{margin-bottom: 12px;}
+    &__thead{display: none;}
+    &__tr{
+      padding: 0 0 12px;
+      flex-wrap: wrap;
+    }
+    &__td{
+      padding-right: 0;    
+      &:nth-child(1){
+        width: 100%;
+        margin-bottom: 12px;
+      }
+      &:nth-child(2){
+        width: auto;
+        padding-right: 12px;
+      }
+      &:nth-child(3){width: 120px;}
+      &:nth-child(4){
+        width: unset;
+        flex-grow: 1;
+      }
+      &-title{display: block;}
+    }
+  }
+}

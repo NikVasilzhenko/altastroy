@@ -3,6 +3,10 @@
 }
 .seo-text{
   @include txt-lg;
+  a{
+    color: $clr-main;
+    &:hover{color: $clr-hover;}
+  }
   p{
     margin: 1.5em 0;
     &:last-child{margin-bottom: 0;}

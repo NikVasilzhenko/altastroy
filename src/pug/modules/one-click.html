@@ -1,0 +1,86 @@
+<div class="popup" id="js-1-click">
+  <div class="popup__overlay js-1-click-btn"></div>
+  <div class="popup__main popup__main--click">
+    <div class="popup__header">
+      <button class="btn select-popup__close js-1-click-btn">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1852 15.1865L5.18563 5.18555M15.1852 5.18646L5.18518 15.1865L15.1852 5.18646Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <h2 class="select-popup__title">Заказ в 1 клик</h2>
+    </div>
+    <div class="popup__content">
+      <form action="#" method="post" class="one-click">
+        <div class="one-click__card">
+          <div class="one-click__tab">
+            <div class="one-click__thead">
+              <div class="one-click__th">Товар</div>
+              <div class="one-click__th">Цена</div>
+              <div class="one-click__th">Количество</div>
+              <div class="one-click__th">Стоимость</div>
+            </div>
+            <div class="one-click__tr">
+              <div class="one-click__td">
+                <div class="one-click__item">
+                  <a href="#" class="one-click__item-pic">
+                    <img src="img/pic/item-min.png" alt="">
+                  </a>
+                  <div class="one-click__item-name">Унитаз подвесной VitrA S50 7740B003-0075</div>
+                </div>
+              </div>
+              <div class="one-click__td">
+                <div class="one-click__td-title">Цена</div>
+                <div class="one-click__td-price">1 400 ₽</div>
+              </div>
+              <div class="one-click__td">
+                <div class="number js-number">
+                  <button type="button" class="btn number__btn-minus js-number-minus">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.32007 11.5203V12.4803H19.6801V11.5203H4.32007Z"></path>
+                    </svg>
+                  </button>
+                  <input type="number" class="input number__input js-number-input" min="1" max="23" value="1">
+                  <button type="button" class="btn number__btn-plus js-number-plus">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M11.5201 4.32019V11.5202H4.32007V12.4802H11.5201V19.6802H12.4801V12.4802H19.6801V11.5202H12.4801V4.32019H11.5201Z"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="one-click__td">
+                <div class="one-click__td-title">Стоимость</div>
+                <div class="one-click__td-summ">1 400 ₽</div>
+              </div>
+            </div>
+          </div>
+          <div class="one-click__count">Итого: 1 400 ₽</div>
+        </div>
+        <div class="one-click__form">
+          <label class="label">
+            <span class="label__title">Телефон: </span>
+            <input type="tel" class="input input--sm" name="tel" placeholder="+7">
+            <span class="label__sub">Менеджер перезвонит Вам, узнает все детали и сам оформит заказ на ваше имя.</span>
+          </label>
+          <label class="label">
+            <span class="label__title">Комментарий: </span>
+            <textarea class="input textarea" name="text" placeholder="Например, удобное время для звонка или пожелания к заказу"></textarea>
+          </label>
+          <label class="check">
+            <span class="checkbox">
+              <input type="checkbox" checked>
+              <span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 10.8001L3.2 8.00007L2.26666 8.9334L6 12.6667L14 4.66673L13.0667 3.7334L6 10.8001Z"></path>
+                </svg>
+              </span>
+            </span>
+            <span class="check__txt">
+              Заполняя данную форму, Вы соглашаетесь на обработку <a href="#">персональных данных</a>
+            </span>
+          </label>
+          <button class="btn btn--primery btn--blc" type="submit">Оформить заказ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

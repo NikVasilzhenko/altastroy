@@ -12,6 +12,9 @@
 @import "basic.scss";
 
 //модули
+@import "about-sec.scss";
+@import "actions.scss";
+@import "article.scss";
 @import "banner.scss";
 @import "breadcrumbs.scss";
 @import "brend-card.scss";
@@ -20,6 +23,8 @@
 @import "categorys.scss";
 @import "collections.scss";
 @import "desctop-catalog.scss";
+@import "detail.scss";
+@import "downloads.scss";
 @import "filter_and_form.scss";
 @import "footer.scss";
 @import "header.scss";
@@ -28,12 +33,19 @@
 @import "hint.scss";
 @import "item.scss";
 @import "mob-popup.scss";
+@import "news.scss";
+@import "one-click.scss";
 @import "pagination.scss";
+@import "popup.scss";
+@import "rait.scss";
 @import "rec-item.scss";
+@import "review.scss";
 @import "search.scss";
 @import "seo.scss";
 @import "slider.scss";
 @import "subscribe.scss";
+@import "week-item.scss";
+
 
 
 

@@ -1,5 +1,10 @@
 .slider{
   position: relative;
+  .swiper-wrapper{
+    display: flex;
+    align-items: stretch;
+    .swiper-slide{height: unset;}
+  }
   &__footer{
     margin-top: 48px;
     display: flex;
@@ -72,6 +77,8 @@
       content: '';
       display: block;
       position: absolute;
+      user-select: none;
+      pointer-events: none;
       top: 0;
       right: 0;
       bottom: 0;
@@ -144,6 +151,7 @@
   }
   @media only screen and (max-width : 767px){
     &__footer{
+      margin-top: 24px;
       &-btn{width: 100%;}
     }
   }
@@ -175,14 +183,20 @@
 .carusel{
   @media only screen and (max-width : 1279px){
     overflow: visible;
-    &.carusel--3{
+    &.carusel--2,
+    &.carusel--3,
+    &.carusel--4,
+    &.carusel--5{
       .swiper-slide{
         max-width: 347px;
       }
     }
   }
   @media only screen and (max-width : 767px){
-    &.carusel--3{
+    &.carusel--2,
+    &.carusel--3,
+    &.carusel--4,
+    &.carusel--5{
       .swiper-slide{max-width: 320px;}
     }
     &.carusel--items{
@@ -197,6 +211,10 @@
     .swiper-slide{width: calc(( 100vw - 40px - (16px * 4)) / 5);}
     .swiper-slide.long{width: calc((( 100vw - 48px - (16px * 4)) / 5) * 2 + 16px);}
   }
+  @media only screen and (max-width : 1364px){
+    .swiper-slide{width: calc(( 100vw - 40px - (16px * 3)) / 4);}
+    .swiper-slide.long{width: calc((( 100vw - 48px - (16px * 3)) / 4) * 2 + 16px);}
+  }
   @media only screen and (max-width: 1279px){
     .swiper-slide{width: 312px;}
     .swiper-slide.long{width: calc(312px * 2 + 16px);}
@@ -204,5 +222,116 @@
   @media only screen and (max-width: 767px){
     .swiper-slide{width: 100%;}
     .swiper-slide.long{width: 100%;}
+  }
+}
+.carusel.carusel--fluid-4{
+  .swiper-slide{width: calc(( 100vw - (100vw - 1500px) - 40px - (16px * 3)) / 4);}
+  .swiper-slide.long{width: calc((( 100vw - (100vw - 1500px) - 40px - (16px * 3)) / 4) * 2 + 16px);}
+  @media only screen and (max-width : 1500px){
+    .swiper-slide{width: calc(( 100vw - 40px - (16px * 3)) / 4);}
+    .swiper-slide.long{width: calc((( 100vw - 48px - (16px * 3)) / 4) * 2 + 16px);}
+  }
+  @media only screen and (max-width : 1364px){
+    .swiper-slide{width: calc(( 100vw - 40px - (16px * 2)) / 3);}
+    .swiper-slide.long{width: calc((( 100vw - 48px - (16px * 2)) / 3) * 2 + 16px);}
+  }
+  @media only screen and (max-width: 1279px){
+    .swiper-slide{width: 312px;}
+    .swiper-slide.long{width: calc(312px * 2 + 16px);}
+  }
+  @media only screen and (max-width: 767px){
+    .swiper-slide{width: 100%;}
+    .swiper-slide.long{width: 100%;}
+  }
+}
+.row-slider-sec{
+  .swiper-slide{max-width: 347px;}
+  @media only screen and (min-width : 1280px){  
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+    .sec-header{
+      width: calc(100% / 3);      
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      margin-bottom: 0;
+      .more-link{padding: 0;}
+    }
+    .slider{
+      width: calc(100% / 3 * 2);      
+      position: static;
+    }
+    .slider__footer-nav{
+      position: absolute;
+      top: 103px;
+      left: 0;
+    }
+    .slider-pagination{display: none;}
+    .slider__footer-btn{display: none;}
+    .slider__footer{margin-top: 0;}
+    .swiper-slide{
+      width: 100%;
+      max-width: unset;
+    }
+  }
+  @media only screen and (min-width : 1365px){
+    .sec-header{width: 25%;}
+    .slider{width: 75%;}
+  }
+  @media only screen and (max-width: 767px){
+    .swiper-slide{max-width: 320px;}
+  }
+}
+
+.carusel--1{
+  @media only screen and (max-width: 1279px){
+    .swiper-slide{width: 648px;}
+  }
+  @media only screen and (max-width: 767px){
+    .swiper-slide{width: 100%;}
+  }
+}
+
+.double-slider{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  &__col{
+    width: calc(50% - 12px);
+    &--long{
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      flex-direction: column;
+      .slider{
+        flex-grow: 1;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-direction: column;
+        .carusel{
+          flex-grow: 1;
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width : 1364px){
+    &__col{
+      &--short{width: calc((100% - 48px) / 3);}
+      &--long{width: calc((100% - 48px) / 3 * 2 + 24px);}
+    }
+  }
+  @media only screen and (max-width: 1279px){
+    display: block;
+    &__col{
+      &--short{
+        width: 100%;
+        margin-top: 72px;
+      }
+      &--long{width: 100%;}
+    }
   }
 }

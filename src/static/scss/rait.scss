@@ -1,0 +1,22 @@
+.rait{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  &__stars{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    img{
+      width: 16px;
+      margin-right: 4px;
+      &:last-child{margin-right: 0;}
+    }
+  }
+  &__struct{
+    margin-left: 8px;
+    font-size: 14px;
+    line-height: 150%;
+    color: $clr-txt-sec;
+    span{color: $clr-txt;}
+  }
+}

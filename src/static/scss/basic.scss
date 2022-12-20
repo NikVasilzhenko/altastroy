@@ -100,6 +100,10 @@ body{
     color: $clr-contr;
     &:hover{background-color: $clr-hover;}
   }
+  &--blc{
+    width: 100%;
+    margin-top: 24px;
+  }
 }
 
 
@@ -151,53 +155,16 @@ img{
 
 
 
-/*form*/
-.input{
-  @include input-reset;
-  background-color: $clr-contr;
-  border: 1px solid $clr-brd;
-  border-radius: $brs;
-  color: $clr-txt;
-  font-size: 14px;
-  height: 60px;
-  padding: 0 15px;
-  /*placeholder*/
-  &::-webkit-input-placeholder{opacity: 1; color: $clr-placeholder;}
-  &::-moz-placeholder{opacity: 1; color: $clr-placeholder;}
-  &:-moz-placeholder{opacity: 1; color: $clr-placeholder;}
-  &:-ms-input-placeholder{opacity: 1; color: $clr-placeholder;}
-  &:placeholder{opacity: 1;color: $clr-placeholder;}
-  /*webkit autocomplit input*/
-  &:-webkit-autofill {
-    -webkit-box-shadow: inset 0 0 0 100px $clr-contr !important;
-    -webkit-text-fill-color: $clr-txt !important;
-    color: $clr-txt !important;
-  }
-  &:focus{border-color: $clr-main;}
-  &.error{border-color: $clr-alert;}
-  //{outline: 5px solid rgba(69, 89, 153, .24);}
-}
-.fieldset{
-  @include fieldset-reset;
-}
-.textarea{
-  /*reset*/
-  @include textarea-reset; 
-  @extend .input;
-  /*my styles*/
-  
-}
-.input:focus:required:valid,
-.textarea:focus:required:invalid{color: $clr-txt;}
-.input:required:valid,
-.textarea:required:valid{color: $clr-txt;}
 
 //sec
 .sec{
   padding: 100px 0;
   @media only screen and (max-width : 767px){padding: 50px 0;}
 }
-.sec--white{background-color: $clr-contr;}
+.sec--white{
+  background-color: $clr-contr;
+  .item{border: 1px solid $clr-brd;}
+}
 .sec--white-to-grey{
   padding: 0;
   background: linear-gradient(to bottom, $clr-contr 0%,$clr-contr 50%,$clr-bg 50%,$clr-bg 100%);
@@ -264,6 +231,12 @@ img{
     color: $clr-hover;
     svg{stroke: $clr-hover;}
   }
+}
+.sec-desc{
+  font-size: 18px;
+  line-height: 150%;
+  color: $clr-txt-sec;
+  margin: -32px 0 48px;
 }
 
 //page

@@ -77,7 +77,6 @@ gulp.task('vendors', function(){
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/inputmask/dist/inputmask.js',
     'node_modules/just-validate/dist/js/just-validate.js',
-    'node_modules/zenscroll/zenscroll.js',
     'node_modules/swiper/swiper-bundle.js',
     'src/static/js/jquery.fancybox.js'
   ])
