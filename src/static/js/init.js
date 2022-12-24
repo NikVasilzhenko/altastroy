@@ -280,6 +280,23 @@ let gallerySlider = new Swiper('#js-detail-gallery-slider', {
   },
 });
 
+let galleryCaruselFast = new Swiper('#js-detail-gallery-carusel-fast', {
+  spaceBetween: 16,
+  slidesPerView: 6,
+  watchSlidesProgress: true,
+  direction: 'vertical',
+});
+let gallerySliderFast = new Swiper('#js-detail-gallery-slider-fast', {
+  spaceBetween: 10,
+  thumbs: {
+    swiper: galleryCaruselFast,
+  },
+  pagination: {
+    el: '#js-detail-gallery-slider-pagination-fast',
+    clickable: true,
+  },
+});
+
 
 
 

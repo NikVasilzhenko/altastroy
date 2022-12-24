@@ -240,3 +240,42 @@
     &__gallery{grid-template-columns: repeat(4, 1fr);}
   }
 }
+
+.reviews-page{
+  &__wrap{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  &__bar{width: 320px;}
+  &__main{width: calc(100% - 320px - 24px);}
+  @media only screen and (max-width : 1023px){
+    &__wrap{display: block;}
+    &__bar{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__main{width: 100%;}
+  }
+  @media only screen and (max-width : 767px){
+    &__bar{
+      width: calc(100% + 32px);
+      margin-left: -16px;
+    }
+  }
+}
+.reviews-sort{
+  background-color: $clr-contr;
+  border-radius: $brs;
+  padding: 24px;
+  &__title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+  }
+  @media only screen and (max-width : 767px){
+    border-radius: 0;
+    padding: 16px;
+  }
+}

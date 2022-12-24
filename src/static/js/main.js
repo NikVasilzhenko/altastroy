@@ -231,6 +231,44 @@ $(document).ready(function(){
     $('#js-1-click').fadeToggle(250);
   })
   
+  //eye button
+  $('.js-eye-btn').on('click', function(){
+    if($(this).hasClass('hide')){
+      $(this).removeClass('hide').siblings('input').attr('type', 'password');
+    } else{
+      $(this).addClass('hide').siblings('input').attr('type', 'text');
+    }
+  });
+  
+  //popup
+  $('.js-close-popup').on('click', function(){
+    $(this).closest('.js-popup').fadeOut(300);
+  });
+  $('.js-sign-in-btn').on('click', function(e){
+    e.preventDefault();
+    $('.js-popup').fadeOut(300);
+    $('#js-sign-in').fadeIn(300);
+  });
+  $('.js-sign-up-btn').on('click', function(e){
+    e.preventDefault();
+    $('.js-popup').fadeOut(300);
+    $('#js-sign-up').fadeIn(300);
+  });
+  $('.js-forgot-pass-btn').on('click', function(e){
+    e.preventDefault();
+    $('.js-popup').fadeOut(300);
+    $('#js-forgot-pass').fadeIn(300);
+  });
+  $('.js-search-loc-btn').on('click', function(e){
+    e.preventDefault();
+    $('.js-popup').fadeOut(300);
+    $('#js-select-loc').fadeIn(300);
+  });
+  
+  //fast view popup
+  $('.js-fast-view').on('click', function(){
+    $('#js-fast-view-popup').fadeIn(300);
+  });
 });
 
 

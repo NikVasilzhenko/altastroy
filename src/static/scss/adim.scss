@@ -1,0 +1,71 @@
+.edit-page-btn{
+  @media only screen and (max-width : 767px){
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+.edit-item-btn{
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+  svg{
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: fill .25s;
+    fill: $clr-main;
+  }
+  &:hover{
+    svg{fill: $clr-hover;}
+  }
+  @media only screen and (max-width : 767px){
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+  }
+}
+.edit-item-btn-long{
+  width: 100%;
+  margin-top: 12px;
+  @media only screen and (max-width : 767px){
+    height: 32px;
+    font-size: 12px;
+    padding: 0;
+    svg{
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;      
+    }
+  }
+}
+
+
+@media only screen and (min-width : 768px){
+  .row-mode .edit-item-btn-long{
+    position: absolute;
+    margin-top: 0;
+    width: 160px;
+    bottom: 82px;
+    right: 24px;
+    height: 38px;
+    font-size: 14px;
+    padding: 0;
+    svg{
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    & ~ .item__price{bottom: 130px;}
+  }  
+}
+@media only screen and (max-width : 767px){
+  .row-mode .edit-item-btn-long{
+    height: 50px;
+    font-size: 16px;
+    svg{
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+}

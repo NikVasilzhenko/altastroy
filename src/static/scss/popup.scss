@@ -25,6 +25,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    max-width: 360px;
     &--click{max-width: 580px;}
   }
   &__header{
@@ -59,12 +60,34 @@
     padding: 24px 16px 24px 24px;
     @include scrollbar; 
   }
+  &-nav{
+    margin-top: 16px;
+    text-align: center;
+    &__row{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-btn{
+      font-size: 16px;
+      line-height: 160%;
+      color: $clr-main;
+      display: inline-block;
+      &:hover{color: $clr-hover;}
+    }
+  }
+  &__txt{
+    font-size: 14px;
+    line-height: 130%;
+    margin-bottom: 12px;
+  }
   @media only screen and (max-width : 1023px){
     &__overlay{display: none;}
     &__main{
       width: 100%;
       height: 100%;
       min-height: 100vh;
+      max-width: unset;
       border-radius: 0;
       transform: none;
       position: absolute;
@@ -110,6 +133,18 @@
       height: calc(100vh - 51px);
       min-height: calc(100vh - 51px);  
       padding: 24px 16px; 
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+    &-form{
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-direction: column;
+      flex-grow: 1;
+      &__main{flex-grow: 1;}
     }
   }
 }
