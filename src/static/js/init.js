@@ -297,6 +297,63 @@ let gallerySliderFast = new Swiper('#js-detail-gallery-slider-fast', {
   },
 });
 
+//scale sliders
+var caruselScale = new Swiper('.js-carusel-scale', {
+  slidesPerView: 'auto',
+  spaceBetween: 8,
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+    },
+    1280: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    1365: {
+      slidesPerView: 5,
+      spaceBetween: 16,
+    },
+  },
+  on: {
+    slideChangeTransitionStart: function (e) {
+      caruselScaleMain.slideTo(e.activeIndex)
+    },
+  },
+});
+var caruselScaleMain = new Swiper('#js-carusel-scale-main', {
+  slidesPerView: 'auto',
+  spaceBetween: 8,
+  navigation: {
+    nextEl: '#js-carusel-scale-main-next',
+    prevEl: '#js-carusel-scale-main-prev',
+  },
+  pagination: {
+    el: '#js-carusel-scale-main-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+    },
+    1280: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    1365: {
+      slidesPerView: 5,
+      spaceBetween: 16,
+    },
+  },
+  on: {
+    slideChangeTransitionStart: function (e) {
+      caruselScale.forEach(
+        element => element.slideTo(e.activeIndex)
+      );
+    },
+  },
+});
 
 
 

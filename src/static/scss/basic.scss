@@ -349,6 +349,7 @@ img{
     }
   }
   @media only screen and (max-width : 767px){
+    padding-bottom: 50px;
     &-title{font-size: 28px;}
     &-header{
       &__wrap{display: block;}   
@@ -370,6 +371,9 @@ img{
   align-items: stretch;
   margin-top: 24px;
   &:first-child{margin-top: 0;}
+  &--3{
+    grid-template-columns: repeat(3, 1fr);
+  }
   &--4{
     grid-template-columns: repeat(4, 1fr);
     &.row-mode{
@@ -385,6 +389,9 @@ img{
     }
   } 
   @media only screen and (max-width : 1299px){
+    &--3{
+      grid-template-columns: repeat(2, 1fr);
+    }
     &--4{
       grid-template-columns: repeat(3, 1fr);
       .banner-item{
@@ -404,6 +411,9 @@ img{
     }
   }
   @media only screen and (max-width: 1023px){
+    &--3{
+      grid-template-columns: repeat(1, 1fr);
+    }
     &--5{
       grid-template-columns: repeat(3, 1fr);
       &.row-mode{
@@ -483,6 +493,42 @@ img{
   }
 }
 
+//table
+.table{
+  width: 100%;
+  border-spacing: 1px 8px;
+  & + .table{margin-top: -8px;}
+  tr{
+    td{
+      padding: 6px 12px;
+      font-size: 18px;
+      line-height: 180%;
+      text-align: left;
+      &:not(:last-child){border-right: 2px solid $clr-bg;}
+    }
+    &:nth-child(odd){
+      td{
+        &:not(:last-child){border-right: 2px solid $clr-brd;}
+      }
+    }
+    &:nth-child(odd){
+      td{
+        background-color: $clr-brd;
+        &:not(:last-child){border-right: 2px solid $clr-brd;}
+      }
+    }
+    th{
+      color: $clr-contr;
+      background-color: $clr-txt-sec;
+      padding: 6px 12px;
+      font-size: 18px;
+      line-height: 180%;
+      font-weight: 400;
+      text-align: left;
+    }
+  }
+}
+.green{color: $clr-confirm;}
 
 
 
