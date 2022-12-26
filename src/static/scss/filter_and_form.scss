@@ -286,6 +286,14 @@
   color: $clr-main;
 }
 div.same-as-selected{color: $clr-main;}
+.select-placeholder{color: $clr-placeholder;}
+.styled-select.lg{
+  .select-selected{
+    height: 60px;
+    line-height: 58px;
+    &::after{right: 18px;}
+  }
+}
 
 .switcherblc{
   display: flex;
@@ -1078,6 +1086,45 @@ div.same-as-selected{color: $clr-main;}
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
+  }
+}
+
+.file{
+  margin: 16px 0;
+  display: block;
+  position: relative;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px 0 48px;
+  border: 1px dashed $clr-brd;
+  border-radius: $brs;
+  background: url(../img/svg/attachment.svg) 17px center no-repeat;
+  background-size: 16px auto;
+  cursor: pointer;
+  transition: border-color .25s;
+  &:hover{border-color: $clr-main;}
+  &__txt{
+    color: $clr-txt-sec;
+    font-size: 14px;
+    line-height: 150%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__del{
+    display: none;
+    svg{
+      display: block;
+      flex-shrink: 0;
+      stroke: $clr-alert;
+    }
+  }
+  &.value{
+    border-color: $clr-main;
+    .file__txt{color: $clr-txt;}
+    .file__del{display: block;}
   }
 }
 

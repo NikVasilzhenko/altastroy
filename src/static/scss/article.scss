@@ -45,6 +45,12 @@
       padding: 24px;
       background-color: $clr-contr;
       border-radius: $brs;
+      p:first-child{margin-top: 0;}
+      p:last-child{margin-bottom: 0;}
+      &--alert{
+        border: 1px solid $clr-alert;
+        background-color: rgba(255, 47, 47, .24);
+      }
     }
     b{font-weight: 500;}
     ol, ul{margin: 24px 0;}

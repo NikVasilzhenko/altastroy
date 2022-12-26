@@ -269,6 +269,33 @@ $(document).ready(function(){
   $('.js-fast-view').on('click', function(){
     $('#js-fast-view-popup').fadeIn(300);
   });
+  
+  //input file
+  $('#js-file').on('change', function(e){
+    var text = $('#js-file-name');
+    if($(this)[0].files[0].name){
+      text.text($(this)[0].files[0].name);
+      $(this).closest('.file').addClass('value');
+    } else{
+      text.text('Прикрепить фото и документы');
+      $(this).closest('.file').removeClass('value');
+    }
+  });
+  $('#js-file-del').on('click', function(e){
+    var text = $('#js-file-name');
+    text.text('Прикрепить фото и документы');
+    $(this).closest('.file').removeClass('value');
+  });
+  
+  //contacts form
+  $('.js-show-form').on('click', function(){
+    $('#js-contact-form').addClass('open');
+  });
+  
+  //select address on the map
+  $('.js-addres-select-btn').on('click', function(){
+    $('#js-addres-select').addClass('open');
+  });
 });
 
 
@@ -303,7 +330,11 @@ for (i = 0; i < x.length; i++) {
   selElmnt = x[i].getElementsByTagName("select")[0];
   a = document.createElement("DIV");
   a.setAttribute("class", "select-selected");
-  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  if(x[i].hasAttribute('data-placeholder')){
+    a.innerHTML = '<span class="select-placeholder">' + x[i].dataset.placeholder + '</span>';
+  } else{
+    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  }  
   x[i].appendChild(a);
   b = document.createElement("DIV");
   b.setAttribute("class", "select-items select-hide");
