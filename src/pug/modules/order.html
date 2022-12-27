@@ -1,0 +1,370 @@
+<nav class="breadcrumbs">
+  <div class="container">
+    <a href="/" class="breadcrumbs__home">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.66675 19.2502V8.25024L11.0459 2.75024L18.3334 8.25024V19.2502H12.9709V12.719H9.00633V19.2502H3.66675ZM5.04175 17.8752H7.63133V11.344H14.3459V17.8752H16.9584V8.93774L11.0459 4.46899L5.04175 8.93774V17.8752Z" />
+      </svg>
+    </a>&emsp;/&emsp;Оформление заказа
+  </div>
+</nav>
+<div class="page">  
+  <header class="page-header">
+    <div class="container">
+      <div class="back-link">
+        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.21875 16.5012L25.7812 16.5012" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"/>
+          <path d="M14.4375 23.719L7.21875 16.5002L14.4375 9.28149" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"/>
+        </svg>
+        <span>Назад</span>        
+      </div>
+      <div class="page-header__wrap">
+        <h1 class="page-title">Оформление заказа</h1>
+      </div>
+    </div>
+  </header>  
+  <div class="page-main">
+    <div class="shopcart">
+      <div class="container"> 
+        <div class="shopcart__wrap">
+          <div class="shopcart__main">
+            <section class="cart-sec">
+              <header class="cart-sec__header">
+                <img src="img/svg/shop-profile.svg" alt="">
+                <span>Ваши данные</span>
+              </header>
+              <div class="cart-sec__main js-tab-container">
+                <div class="switcher cart-sec__nav">
+                  <button class="btn switcher__btn js-tab active" type="button">Товары</button>
+                  <button class="btn switcher__btn js-tab" type="button">Коллекции</button>
+                </div>
+                <div class="cart-sec__items">
+                  <div class="js-tab-item">
+                    <form action="#" method="post" class="form">
+                      <label class="label">
+                        <input type="text" name="name" class="input" placeholder="Имя Фамилия">
+                      </label>
+                      <label class="label">
+                        <input type="tel" name="tel_1" class="input" required placeholder="Телефон *">                        
+                      </label>
+                      <button class="btn label-add">+ ещё один телефон</button>
+                      <label class="label">
+                        <input type="email" name="email" class="input" placeholder="Электронная почта">
+                      </label>
+                    </form>
+                  </div>
+                  <div class="js-tab-item">
+                    <form action="#" method="post" class="form">
+                      <label class="label">
+                        <input type="text" name="name" class="input" placeholder="Имя Фамилия">
+                      </label>
+                      <label class="label">
+                        <input type="tel" name="tel_1" class="input" required placeholder="Телефон *">                        
+                      </label>
+                      <button class="btn label-add">+ ещё один телефон</button>
+                      <label class="label">
+                        <input type="email" name="email" class="input" placeholder="Электронная почта">
+                      </label>
+                      <h3 class="form__title">Данные о вашей организации</h3>
+                      <label class="label">
+                        <input type="text" name="company_name" class="input" placeholder="Наименование организации или ИНН">
+                      </label>
+                      <label class="label">
+                        <input type="text" name="address" class="input" placeholder="Юридический адрес">
+                      </label>
+                      <div class="form__row">
+                        <label class="label">
+                          <input type="text" name="inn" class="input" placeholder="ИНН">
+                        </label>
+                        <label class="label">
+                          <input type="text" name="ogrn" class="input" placeholder="ОГРН">
+                        </label>
+                      </div>
+                      <div class="form__row">
+                        <label class="label">
+                          <input type="text" name="kpp" class="input" placeholder="КПП">
+                        </label>
+                        <label class="label">
+                          <input type="text" name="bik" class="input" placeholder="БИК">
+                        </label>
+                      </div>
+                      <label class="label">
+                        <input type="text" name="bank_name" class="input" placeholder="Название банка">
+                      </label>
+                      <label class="label">
+                        <input type="text" name="bill" class="input" placeholder="Расчетный счет">
+                      </label>
+                      <label class="label">
+                        <textarea class="input textarea" name="comment" placeholder="Комментарии"></textarea>
+                      </label>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="cart-sec">
+              <header class="cart-sec__header">
+                <img src="img/svg/shop-delivery.svg" alt="">
+                <span>Ваши данные</span>
+              </header>
+              <div class="cart-sec__main js-tab-container">
+                <div class="switcher cart-sec__nav">
+                  <button class="btn switcher__btn js-tab active" type="button">Доставка</button>
+                  <button class="btn switcher__btn js-tab" type="button">Самовывоз</button>
+                </div>
+                <div class="cart-sec__items">
+                  <div class="js-tab-item">
+                    <div class="cart-sec__txt">с 13 октября, чт  <b>890 ₽</b></div>
+                    <form action="#" method="post" class="form">
+                      <div class="form__header">
+                        <h3 class="form__title">Выбрать адрес доставки</h3>
+                        <button class="btn form__header-btn">Указать на карте</button>
+                      </div>
+                      <div class="checklist">
+                        <label class="check">
+                          <span class="radiobutton">
+                            <input type="radio" name="radio-1" checked="">
+                            <span></span>
+                          </span>
+                          <span class="check__txt">Нижний Новгород, ул. Ленина, д.313, кв. 6</span>
+                        </label>
+                        <label class="check">
+                          <span class="radiobutton">
+                            <input type="radio" name="radio-1">
+                            <span></span>
+                          </span>
+                          <span class="check__txt">Нижний Новгород, ул. Мира, д.11/2, кв. 34</span>
+                        </label>
+                      </div>
+                      <h3 class="form__title">Указать новый адрес доставки</h3>
+                      <label class="label">
+                        <input type="text" name="name" class="input" required placeholder="Улица *">
+                      </label>
+                      <div class="form__row form__row--3">
+                        <label class="label">
+                          <input type="text" name="house" required class="input" placeholder="Дом/корпус *">
+                        </label>
+                        <label class="label">
+                          <input type="text" name="office" class="input" placeholder="Квартира офис">
+                        </label>
+                        <label class="label">
+                          <input type="text" name="gate" class="input" placeholder="Подъезд">
+                        </label>
+                      </div>                      
+                      <label class="label">
+                        <textarea class="input textarea" name="address_comment" placeholder="Комментарии к доставки"></textarea>
+                      </label>
+                    </form>
+                  </div>
+                  <div class="js-tab-item">
+                    <div class="cart-sec__txt">с 13 октября, чт <b>Бесплатно</b> <span>(2 магазина)</span></div>
+                    <h3 class="form__title">Выбор пункта выдачи</h3>
+                    <div class="map">
+                      <div class="map__map" id="js-map"></div>
+                      <div class="map__wrap">
+                        <div class="map-item">
+                          <div class="map-item__sup">Магазин/пункт выдачи</div>
+                          <div class="map-item__address">603108, Нижний Новгород, ул. Кузбасская 17а, офис 2</div>
+                          <div class="map-item__time">
+                            <img src="img/svg/cont-time.svg" alt="">
+                            <div class="map-item__time-wrap">
+                              <div>Пн-Пт: с 09:00 до 22:00 </div>
+                              <div>Сб-Вс: с 09:30 до 21:00</div>
+                            </div>
+                          </div>
+                          <a target="_blank" href="https://yandex.ru/maps/?rtext=55.659173,37.762848&rtt=mt" class="map-item__link">Показать на карте</a>
+                          <button class="btn btn--primery btn-sm btn--blc">
+                            <img src="img/svg/check.svg" alt="">&nbsp;Выбран
+                          </button>
+                        </div>
+                        <div class="map-item">
+                          <div class="map-item__sup">Магазин/пункт выдачи</div>
+                          <div class="map-item__address">603108, Нижний Новгород, ул. Кузбасская 17а, офис 2</div>
+                          <div class="map-item__time">
+                            <img src="img/svg/cont-time.svg" alt="">
+                            <div class="map-item__time-wrap">
+                              <div>Пн-Пт: с 09:00 до 22:00 </div>
+                              <div>Сб-Вс: с 09:30 до 21:00</div>
+                            </div>
+                          </div>
+                          <a target="_blank" href="https://yandex.ru/maps/?rtext=55.659173,37.762848&rtt=mt" class="map-item__link">Показать на карте</a>
+                          <button class="btn btn--secondary btn-sm btn--blc">Выбрать</button>
+                        </div>
+                      </div>
+                    </div>
+                    <form action="#" method="post" class="form">
+                      <div class="form__header js-switcher-accordion-header">
+                        <h3 class="form__title">Заказ будет получать другой человек</h3>
+                        <label class="switchbox">
+                          <input type="checkbox" class="js-switcher-accordion-trigger">
+                          <span></span>
+                        </label>
+                      </div>
+                      <div class="form__hide">
+                        <div class="form__row">
+                          <label class="label">
+                            <input type="tel" name="recep_tel" required class="input" placeholder="Телефон получателя *">
+                          </label>
+                          <label class="label">
+                            <input type="text" name="recep_name" class="input" placeholder="Имя и фамилия получателя">
+                          </label>
+                        </div> 
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="cart-sec">
+              <header class="cart-sec__header">
+                <img src="img/svg/shop-pay.svg" alt="">
+                <span>Способ оплаты</span>
+              </header>
+              <div class="cart-sec__main">
+                <div class="cart-sec__txt">Создадим уникальное интерьерное решение</div>
+                <form action="#" method="post" class="form">
+                  <div class="form__row">
+                    <label class="smart-radio">
+                      <input type="radio" name="payment" checked>
+                      <span class="smart-radio__cust">
+                        <span class="smart-radio__button"></span>
+                        <span class="smart-radio__main">
+                          <span class="smart-radio__name">При получении</span>
+                          <span class="smart-radio__txt">Наличными или картой</span>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="smart-radio">
+                      <input type="radio" name="payment">
+                      <span class="smart-radio__cust">
+                        <span class="smart-radio__button"></span>
+                        <span class="smart-radio__main">
+                          <span class="smart-radio__name">Онлайн</span>
+                          <span class="smart-radio__txt">Mastercard, Visa, МИР и SberPay</span>
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                </form>
+              </div>
+            </section>
+            <section class="cart-sec">
+              <header class="cart-sec__header">
+                <img src="img/svg/shop-support.svg" alt="">
+                <span>Дополнительно</span>
+              </header>
+              <div class="cart-sec__main">                
+                <form action="#" method="post" class="form">
+                  <label class="label">
+                    <textarea class="input textarea" name="order_comment" placeholder="Комментарий к заказу"></textarea>
+                  </label>
+                  <div class="form__header js-switcher-accordion-header">
+                    <h3 class="form__title">У меня остались вопросы</h3>
+                    <label class="switchbox">
+                      <input type="checkbox" class="js-switcher-accordion-trigger">
+                      <span></span>
+                    </label>
+                  </div>
+                  <div class="form__hide">
+                    <div class="cart-sec__txt">Нужен звонок от менеджера? Когда вам перезвонить?</div>
+                    <div class="form__row">
+                      <div class="styled-select lg js-styled-select">
+                        <select name="categorys">
+                          <option value="В течении 10 мин">В течении 10 мин</option>
+                          <option value="В течении 30 мин">В течении 30 мин</option>
+                          <option value="В течении 1 часа">В течении 1 часа</option>
+                          <option value="В течении рабочего дня">В течении рабочего дня</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </div>
+          <div class="shopcart__bar">
+            <section class="cart-sec">
+              <header class="cart-sec__header">
+                <img src="img/svg/shop-order.svg" alt="">
+                <span>Ваш заказ</span>
+              </header>
+              <div class="cart-sec__main">
+                <form action="#" method="post" class="promo">
+                  <input type="text" name="promo" placeholder="Промо-код" class="input input--sm">
+                  <button class="btn btn--primery btn-sm promo__submit" type="submit">Применить</button>
+                </form>
+                <div class="cart-sec__tab">
+                  <div class="cart-sec__tab-row">
+                    <div class="cart-sec__tab-name">Товаров (2):</div>
+                    <div class="cart-sec__tab-val">5 700 ₽</div>
+                  </div>
+                  <div class="cart-sec__tab-row">
+                    <div class="cart-sec__tab-name">Скидка по акции: </div>
+                    <div class="cart-sec__tab-val red">-1 000 ₽</div>
+                  </div>
+                  <div class="cart-sec__tab-sub">
+                    <div class="cart-sec__tab-sub-name">Стоимость товаров</div>
+                    <div class="cart-sec__tab-sub-val">4 700 ₽</div>
+                  </div>
+                  <button class="btn btn--main btn--blc cart-sec__btn">Перейти к оформлению</button>
+                </div>
+              </div>
+            </section>
+            <section class="cart-sec">
+              <header class="cart-sec__header">
+                <img src="img/svg/shop-setting.svg" alt="">
+                <span>Установка</span>
+              </header>
+              <div class="cart-sec__main">
+                <div class="cart-sec__txt">Оплата после установки. Дату и детали уточнит менеджер</div>
+                <div class="cart-sec__tab">
+                  <div class="cart-sec__tab-row">
+                    <div class="cart-sec__tab-name">Установка унитаза подвесного: </div>
+                    <div class="cart-sec__tab-val">3 200 ₽</div>
+                  </div>
+                  <div class="cart-sec__tab-row">
+                    <div class="cart-sec__tab-name">Установка унитаза подвесного:</div>
+                    <div class="cart-sec__tab-val">3 200 ₽</div>
+                  </div>
+                  <div class="cart-sec__tab-sub">
+                    <div class="cart-sec__tab-sub-name">Стоимость установки</div>
+                    <div class="cart-sec__tab-sub-val">6 400 ₽</div>
+                  </div>
+                </div>
+                <div class="cart-sec__info">
+                  <img src="img/svg/shop-info.svg" alt="">
+                  <div class="cart-sec__info-txt">Не предоставляем услугу установки юридическим лицам</div>
+                </div>
+              </div>
+            </section>
+            <div class="shopcart__sub">
+              Нажимая «Оформить заказ», вы соглашаетесь с условиями <a href="#">Публичной оферты</a> и <a href="#">Политики конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://api-maps.yandex.ru/2.1/?load=package.standard,package.geoObjects&lang=ru-RU&scroll=true"></script>
+<script>
+  if (document.documentElement.clientWidth >= 768){
+    window.addEventListener("DOMContentLoaded", function(){
+      ymaps.ready(init);
+      function init() {
+        var map = new ymaps.Map('js-map', {
+            center: [55.744647, 37.552157],
+            zoom: 16,
+            controls: []
+        });
+        var myPlacemark = new ymaps.GeoObject({
+          geometry: {
+              type: "Point",
+              coordinates: [55.744647, 37.552157]
+          }
+        });
+        map.geoObjects.add(myPlacemark);
+        map.behaviors.disable('scrollZoom');
+      };
+   });
+  }
+</script>

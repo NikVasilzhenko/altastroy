@@ -136,6 +136,24 @@ body{
     width: 100%;
     margin-top: 24px;
   }
+  &--main{
+    padding: 17px 44px;
+    border-radius: $brs;
+    background-color: $clr-confirm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min-conent;
+    font-size: 16px;
+    line-height: 160%;
+    color: $clr-contr;
+    &.btn-sm{
+      padding: 12px 24px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    &:hover{background-color: darken($clr-confirm, 10%);}
+  }
 }
 
 
@@ -255,6 +273,28 @@ img{
     stroke: $clr-main;
     display: block;
     margin-left: 10px;
+    transition: stroke .25s;
+  }
+  &:hover{
+    color: $clr-hover;
+    svg{stroke: $clr-hover;}
+  }
+}
+.back-link{
+  white-space: nowrap;
+  padding: 0;
+  font-size: 20px;
+  line-height: 160%;
+  color: $clr-main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-bottom: 6px;
+  svg{
+    stroke: $clr-main;
+    display: block;
+    margin-right: 10px;
     transition: stroke .25s;
   }
   &:hover{

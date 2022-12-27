@@ -91,6 +91,15 @@
   &.hide{background-image: url(../img/svg/closed-eye.svg);}
 }
 
+.label-add{
+  display: block;
+  width: fit-content;
+  font-size: 14px;
+  line-height: 16px;
+  color: $clr-main;
+  margin: -10px 0 16px;
+  &:hover{color: $clr-hover;}
+}
 
 .filter-item{
   margin-bottom: 24px;
@@ -228,7 +237,6 @@
     &--mob-hide{display: none;}
   }
 }
-
 
 .styled-select{
   position: relative;
@@ -1125,6 +1133,107 @@ div.same-as-selected{color: $clr-main;}
     border-color: $clr-main;
     .file__txt{color: $clr-txt;}
     .file__del{display: block;}
+  }
+}
+
+.form{
+  &__title{
+    margin: 40px 0 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    &:first-child{margin-top: 0;}
+  }
+  &__row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    & > *{width: calc(50% - 8px);}
+    &--3{
+      & > *{width: calc((100% - 32px) / 3);}
+    }
+  }
+  &__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    .form__title{margin: 0;}
+    &-btn{
+      font-size: 14px;
+      line-height: 130%;
+      color: $clr-main;
+      &:hover{color: $clr-hover;}
+    }
+  }
+  &__hide{display: none;}
+  @media only screen and (max-width : 767px){
+    &__row{
+      display: block;
+      margin-bottom: 16px;
+      & > *{width: 100%;}
+      &--3{
+        & > *{width: 100%;}
+      }
+    }
+    &__header{
+      .form__title{margin-right: 12px;}
+    }
+  }
+}
+.smart-radio{
+  display: block;
+  &__cust{
+    width: 100%;
+    padding: 16px;
+    border: 1px solid $clr-brd;
+    border-radius: $brs;
+    transition: all .25s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    &:hover{
+      border-color: $clr-main;
+      .smart-radio__button{border-color: $clr-main;}
+    }
+  }
+  &__button{
+    margin-right: 12px;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid $clr-brd;
+    flex-shrink: 0;
+    transition: all .25s;
+  }
+  &__name{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    display: block;
+  }
+  &__txt{
+    font-size: 12px;
+    line-height: 150%;
+    color: $clr-txt-sec;
+  }
+  input{
+    display: none;
+    &:checked + .smart-radio__cust{
+      border-color: transparent;
+      background-color: $clr-bg;
+      box-shadow: 0 0 0 4px rgba(69, 89, 153, .24);
+      .smart-radio__button{
+        border-color: $clr-main;
+        background-color: $clr-main;
+        box-shadow: 0 0 0 2px $clr-contr inset;
+      }
+    }
+  }
+  @media only screen and (max-width : 767px){
+    &:not(:last-child){margin-bottom: 12px;}
   }
 }
 
