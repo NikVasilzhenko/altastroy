@@ -333,6 +333,14 @@ $(document).ready(function(){
 	$('.my-addresses__hide.open').removeClass('open');
 	$('#js-address-fields').addClass('open');
   });
+  
+  //design nav open
+  $('.js-design-nav-btn').on('click', function(){
+	$('#js-design-nav').addClass('open');
+  });
+  $('#js-design-nav ul li a').on('click', function(){
+    $('#js-design-nav').removeClass('open');
+  });
 });
 
 

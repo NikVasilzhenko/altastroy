@@ -1,0 +1,691 @@
+<div class="showcase-mob-top"></div>
+<header class="header-main header-main--showcase" id="js-header-sticky">
+  <div class="header-main__flipper">
+    <div class="container">
+      <div class="header-main__wrap">
+        <a href="/" class="header-logo">
+          <img src="img/svg/showcase-logo.svg" alt="Мой магазин">
+        </a>
+        <button class="btn header-catalog-btn js-catalog-btn" id="js-catalog-btn">
+          <div class="header-catalog-btn__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span>Каталог</span>
+        </button>
+        <form action="#" method="get" class="search" id="js-search">
+          <input type="search" name="search" class="input search__input" autocomplete="off" placeholder="Найдём среди 1500 товаров...">
+          <button class="btn search__submit" type="submit">
+            <img src="img/svg/search.svg" alt="">
+          </button>
+        </form>
+        <button class="btn fake-search js-open-search-popup">
+          <span>Найдём среди 1500 товаров...</span>
+          <img src="img/svg/search.svg" alt="">
+        </button>
+        <nav class="header-bar">
+          <ul>
+            <li>
+              <a href="#" class="header-tool js-sign-in-btn">
+                <i class="header-tool__icn header-tool__icn--user">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.0001 15.7938C18.9807 15.7938 21.3969 13.3775 21.3969 10.3969C21.3969 7.41636 18.9807 5.00012 16.0001 5.00012C13.0195 5.00012 10.6033 7.41636 10.6033 10.3969C10.6033 13.3775 13.0195 15.7938 16.0001 15.7938Z" stroke-miterlimit="10" stroke-linecap="square"/>
+                    <path d="M26.7937 27.6668C26.7937 22.8978 21.9612 19.0319 16 19.0319C10.0388 19.0319 5.20636 22.8978 5.20636 27.6668" stroke-miterlimit="10" stroke-linecap="square"/>
+                  </svg>
+                </i>
+                <span>Профиль</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="header-tool">
+                <i class="header-tool__icn header-tool__icn--fav">
+                  <span class="header-tool__counter">9</span>
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 5.50012C19.4 5.50012 16.85 7.15012 16 9.50012C15.15 7.20012 12.6 5.50012 10 5.50012C8.41733 5.50007 6.89873 6.12534 5.77494 7.23977C4.65115 8.35419 4.01319 9.8675 4 11.4501C4 17.0501 8.4 22.2001 16 27.0001C23.6 22.2001 28 17.0501 28 11.4501C27.9868 9.8675 27.3489 8.35419 26.2251 7.23977C25.1013 6.12534 23.5827 5.50007 22 5.50012Z" stroke-miterlimit="10" stroke-linecap="round"/>
+                  </svg>
+                </i>
+                <span>Избранное</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="header-tool header-tool__icn--scale">
+                <i class="header-tool__icn">
+                  <span class="header-tool__counter">999</span>
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M29.4642 16.8145L25.4642 6.81445C25.4628 6.81091 25.4608 6.8078 25.4592 6.80426C25.4554 6.79523 25.4508 6.7868 25.4464 6.77808C25.4374 6.75986 25.4273 6.74221 25.4161 6.72522C25.4104 6.71655 25.4047 6.70801 25.3984 6.69971C25.3851 6.68205 25.3705 6.66531 25.3549 6.6496C25.35 6.64471 25.3458 6.63928 25.3408 6.63464C25.3199 6.61527 25.2974 6.59773 25.2736 6.58221C25.2667 6.57776 25.2594 6.57416 25.2523 6.57001C25.2343 6.55938 25.2157 6.54988 25.1965 6.54156C25.1872 6.5376 25.1778 6.53387 25.1682 6.53046C25.149 6.52363 25.1293 6.51801 25.1094 6.51361C25.1005 6.5116 25.0918 6.50903 25.0827 6.50751C25.0554 6.50274 25.0277 6.50027 25 6.50012C24.9987 6.50012 24.9976 6.50037 24.9963 6.50043C24.9899 6.50049 24.9834 6.50159 24.977 6.50189C24.9524 6.503 24.9278 6.50592 24.9036 6.51062C24.8996 6.51141 24.8956 6.51117 24.8915 6.51208L16.5 8.37689V5.00012C16.5 4.86751 16.4473 4.74034 16.3536 4.64657C16.2598 4.5528 16.1326 4.50012 16 4.50012C15.8674 4.50012 15.7402 4.5528 15.6464 4.64657C15.5527 4.74034 15.5 4.86751 15.5 5.00012V8.59912L6.89154 10.5121C6.88684 10.5131 6.88281 10.5153 6.87817 10.5165C6.85505 10.5223 6.83236 10.5298 6.8103 10.5389C6.80359 10.5416 6.79663 10.5438 6.7901 10.5469C6.7639 10.559 6.73881 10.5733 6.71508 10.5897C6.70849 10.5943 6.70275 10.5996 6.69647 10.6044C6.67938 10.6175 6.66313 10.6316 6.64782 10.6467C6.64086 10.6537 6.63427 10.6607 6.6278 10.668C6.6139 10.6837 6.601 10.7002 6.58917 10.7175C6.58441 10.7245 6.57922 10.7311 6.57482 10.7383C6.55962 10.7625 6.54655 10.788 6.53576 10.8145L6.53491 10.8165L6.53442 10.8178L2.53577 20.8145C2.51215 20.8735 2.50001 20.9365 2.5 21.0001C2.5 23.5499 5.26019 24.5001 7 24.5001C8.73981 24.5001 11.5 23.5499 11.5 21.0001C11.5 20.9365 11.4879 20.8735 11.4642 20.8145L7.68268 11.3605L15.5 9.62335V26.5001H13C12.8674 26.5001 12.7402 26.5528 12.6464 26.6466C12.5527 26.7403 12.5 26.8675 12.5 27.0001C12.5 27.1327 12.5527 27.2599 12.6464 27.3537C12.7402 27.4474 12.8674 27.5001 13 27.5001H19C19.1326 27.5001 19.2598 27.4474 19.3536 27.3537C19.4473 27.2599 19.5 27.1327 19.5 27.0001C19.5 26.8675 19.4473 26.7403 19.3536 26.6466C19.2598 26.5528 19.1326 26.5001 19 26.5001H16.5V9.40112L24.1841 7.69354L20.5358 16.8145C20.5121 16.8735 20.5 16.9365 20.5 17.0001C20.5 19.5499 23.2602 20.5001 25 20.5001C26.7398 20.5001 29.5 19.5499 29.5 17.0001C29.5 16.9365 29.4879 16.8735 29.4642 16.8145ZM7 23.5001C6.10577 23.5001 3.57837 23.0546 3.50177 21.0919L7 12.3464L10.4982 21.0919C10.4216 23.0546 7.89423 23.5001 7 23.5001ZM25 19.5001C24.1058 19.5001 21.5784 19.0546 21.5018 17.0919L25 8.34644L28.4982 17.0919C28.4216 19.0546 25.8942 19.5001 25 19.5001Z" />
+                  </svg>
+                </i>
+                <span>Сравнение</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="header-tool">
+                <i class="header-tool__icn header-tool__icn--cart">
+                  <span class="header-tool__counter" title="1 234">+1K</span>
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0526 4.00012C14.1798 4.1572 13.3686 4.57718 12.7329 5.21291C11.9121 6.03374 11.4509 7.14703 11.4509 8.30786V10.134H7.29863H6.82084L6.79914 10.6113L6.02376 27.6698L6 28.1925H6.52324H25.1325H25.6557L25.632 27.6698L24.8566 10.6113L24.8349 10.134H24.3571H20.2048V9.85862H19.2048V10.134H12.4509V8.30786C12.4509 7.41224 12.8067 6.55331 13.44 5.92001C13.8872 5.47282 14.4469 5.164 15.0526 5.02112V4.00012ZM19.2048 13.7356V11.134H12.4509V13.7356C12.4509 14.0117 12.2271 14.2356 11.9509 14.2356C11.6748 14.2356 11.4509 14.0117 11.4509 13.7356V11.134H7.77642L7.04649 27.1925H24.6092L23.8793 11.134H20.2048V13.7356C20.2048 14.0117 19.9809 14.2356 19.7048 14.2356C19.4286 14.2356 19.2048 14.0117 19.2048 13.7356Z"/>
+                  </svg>
+                </i>
+                <span>Корзина</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="header-tool">
+                <i class="header-tool__icn header-tool__icn--cart">
+                  <span class="header-tool__counter" title="1 234">+1K</span>
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0526 4.00012C14.1798 4.1572 13.3686 4.57718 12.7329 5.21291C11.9121 6.03374 11.4509 7.14703 11.4509 8.30786V10.134H7.29863H6.82084L6.79914 10.6113L6.02376 27.6698L6 28.1925H6.52324H25.1325H25.6557L25.632 27.6698L24.8566 10.6113L24.8349 10.134H24.3571H20.2048V9.85862H19.2048V10.134H12.4509V8.30786C12.4509 7.41224 12.8067 6.55331 13.44 5.92001C13.8872 5.47282 14.4469 5.164 15.0526 5.02112V4.00012ZM19.2048 13.7356V11.134H12.4509V13.7356C12.4509 14.0117 12.2271 14.2356 11.9509 14.2356C11.6748 14.2356 11.4509 14.0117 11.4509 13.7356V11.134H7.77642L7.04649 27.1925H24.6092L23.8793 11.134H20.2048V13.7356C20.2048 14.0117 19.9809 14.2356 19.7048 14.2356C19.4286 14.2356 19.2048 14.0117 19.2048 13.7356Z"/>
+                  </svg>
+                </i>
+                <span>Корзина</span>
+              </a>              
+            </li>
+          </ul>
+        </nav>
+        <label class="showcase-switcher">
+          <div class="switchbox">
+            <input type="checkbox" class="js-switcher-accordion-trigger">
+            <span></span>
+          </div>
+          <span>Витрина</span>
+        </label>
+      </div>
+    </div>
+  </div>  
+</header>
+
+<div class="mob-popup js-mob-popup desctop-catalog" id="js-desctop-catalog">  
+  <div class="desctop-catalog__wrap" id="js-desctop-catalog-wrap">
+    
+    <div class="desctop-catalog__main js-catalog-main" id="js-desctop-catalog-main">
+      <header class="mob-popup__header">
+        <button class="btn mob-popup__close js-mob-popup-close js-catalog-btn"></button>
+        <h2 class="mob-popup__title">Каталог</h2>
+      </header>
+      <div class="mob-popup__main">
+        <div class="container">
+          <div class="desctop-catalog-brends">
+            <div class="desctop-catalog__header">
+              <h2 class="desctop-catalog__title">Популярные бренды</h2>
+              <div class="desctop-catalog-brends__bar">
+                <button class="btn slider-btn" id="js-desctop-catalog-brends-prev">
+                  <svg width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.02 1.09375L0.61377 10.5L10.02 19.9062" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <button class="btn slider-btn" id="js-desctop-catalog-brends-next">
+                  <svg width="11" height="21" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.97998 19.9062L10.3862 10.5L0.979982 1.09375" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <a href="#" class="btn btn--ghos btn--ghos--lg">
+                  <span>К списку брендов</span>
+                  <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.875 14.499H6.125" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.75 8.375L21.875 14.5L15.75 20.625" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="swiper desctop-catalog-brends__slider" id="js-desctop-catalog-brends-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-santek-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-bn-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-roca-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-wasser-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-riho-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-santek-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-bn-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-roca-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-wasser-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-riho-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-santek-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-bn-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-roca-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-wasser-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-riho-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-santek-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-bn-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-roca-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-wasser-min.png" alt="">
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="desctop-catalog-brend">
+                    <img src="img/pic/logo-riho-min.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="desctop-catalog__categorys">
+            <div class="desctop-catalog__header">
+              <h2 class="desctop-catalog__title">Каталог</h2>
+            </div>
+
+            <div class="categorys">
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Душевые <br>кабины</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/dushevaya_cabina-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Ванны</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/vanna-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Мебель <br>для ванной <br>комнаты</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/mebel_dlya_vannoy-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Керамическая <br>плитка</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/keramicheskaya_plitka-min.png" alt="">
+                </div>              
+              </a>            
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Унитазы</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/unitaz-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Уголки, <br>ограждения, <br>поддоны</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/ugolki-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Смесители</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/smesiteli-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Полотенцесушители</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/polotencesushiteli-min.png" alt="">
+                </div>              
+              </a>            
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Душевые <br>системы</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/dushevie_sistemi-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Керамогранит</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/keramogranit-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Ламинат</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/laminat-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Мойки <br>для кухни</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/moiki-min.png" alt="">
+                </div>              
+              </a>            
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Бойлеры</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/boileri-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Инсталляции</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/instaliacii-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item js-desctop-catalog-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Инфракрасные <br>сауны</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/infrakrasnii_sauni-min.png" alt="">
+                </div>              
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="desctop-catalog__sub" id="js-desctop-catalog-sub">
+      <header class="mob-popup__header">
+        <button class="btn mob-popup__close mob-popup__close--back js-mob-popup-close js-desctop-catalog-back">
+          <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.02 12.0937L16.6138 21.5L26.02 30.9062" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <h2 class="mob-popup__title">Название категории</h2>
+      </header>
+      <div class="mob-popup__main">
+        <div class="container">
+          <div class="desctop-catalog__categorys">
+            <div class="desctop-catalog__header">
+              <button class="btn desctop-catalog__back js-desctop-catalog-back">
+                <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.02 12.0937L16.6138 21.5L26.02 30.9062" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Название категории
+              </button>
+            </div>
+
+            <div class="categorys" id="js-desctop-catalog-subcategory">
+              <a href="#" class="category-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Душевые <br>кабины</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/dushevaya_cabina-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Душевые <br>кабины</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/dushevaya_cabina-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Душевые <br>кабины</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/dushevaya_cabina-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Душевые <br>кабины</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/dushevaya_cabina-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Душевые <br>кабины</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/dushevaya_cabina-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Душевые <br>кабины</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/dushevaya_cabina-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Душевые <br>кабины</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/dushevaya_cabina-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Душевые <br>кабины</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/dushevaya_cabina-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Душевые <br>кабины</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/dushevaya_cabina-min.png" alt="">
+                </div>              
+              </a>
+              <a href="#" class="category-item">
+                <div class="category-item__bg"></div>
+                <div class="category-item__txt">Душевые <br>кабины</div>
+                <div class="category-item__pic">
+                  <img src="img/pic/dushevaya_cabina-min.png" alt="">
+                </div>              
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<nav class="mob-bottom-bar">
+  <a class="bottom-bar-item">
+    <img src="img/svg/catalog.svg" alt="">
+  </a>
+  <a href="#" class="bottom-bar-item">
+    <span class="bottom-bar-item__counter">9</span>
+    <img src="img/svg/scale.svg" alt="">
+  </a>
+  <a href="#" class="bottom-bar-item">
+    <span class="bottom-bar-item__counter">999</span>
+    <img src="img/svg/fav.svg" alt="">
+  </a>
+  <a href="#" class="bottom-bar-item">
+    <span class="bottom-bar-item__counter" title="1 234">+1K</span>
+    <img src="img/svg/cart.svg" alt="">
+  </a>
+  <a href="#" class="bottom-bar-item js-sign-in-btn">
+    <img src="img/svg/user.svg" alt="">
+  </a>
+</nav>
+
+
+<div class="mob-popup js-mob-popup" id="js-search-mob-popup">
+  <header class="mob-popup__header">
+    <button class="btn mob-popup__close js-mob-popup-close"></button>
+    <h2 class="mob-popup__title">Поиск</h2>
+  </header>
+  <div class="mob-popup__main">
+    <form action="#" method="get" class="search search--mob" id="js-search-mob">
+      <input type="search" name="search_mob" class="input search__input" autocomplete="off" placeholder="Найдём среди 1500 товаров...">
+      <button class="btn search__submit" type="submit">
+        <img src="img/svg/search.svg" alt="">
+      </button>
+    </form>
+  </div>
+</div>
+
+<div class="popup js-popup" id="js-sign-in">
+  <div class="popup__overlay js-close-popup"></div>
+  <div class="popup__main">
+    <div class="popup__header">
+      <button class="btn select-popup__close js-close-popup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1852 15.1865L5.18563 5.18555M15.1852 5.18646L5.18518 15.1865L15.1852 5.18646Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <h2 class="select-popup__title">Вход</h2>
+    </div>
+    <div class="popup__content">
+      <form action="#" method="post" class="popup-form">
+        <div class="popup-form__main">
+          <label class="label">
+            <input type="email" class="input input--sm error" name="login" placeholder="Логин">
+            <span class="label__error">Текст ошибки</span>
+          </label>
+          <label class="label">
+            <input type="password" class="input input--sm" name="password" placeholder="Пароль">
+            <button class="btn eye-btn js-eye-btn" type="button"></button>
+          </label>
+        </div>
+        <button class="btn btn--primery btn--blc" type="submit">Войти</button>
+      </form>
+      <div class="popup-nav">
+        <div class="popup-nav__row">
+          <button class="btn popup-nav-btn js-forgot-pass-btn">Забыли пароль?</button>
+          <button class="btn popup-nav-btn js-sign-up-btn">Регистрация</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup js-popup" id="js-sign-up">
+  <div class="popup__overlay js-close-popup"></div>
+  <div class="popup__main">
+    <div class="popup__header">
+      <button class="btn select-popup__close js-close-popup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1852 15.1865L5.18563 5.18555M15.1852 5.18646L5.18518 15.1865L15.1852 5.18646Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <h2 class="select-popup__title">Регистрация</h2>
+    </div>
+    <div class="popup__content">
+      <form action="#" method="post" class="popup-form">
+        <div class="popup-form__main">
+          <label class="label">
+            <input type="email" class="input input--sm" name="login" placeholder="Логин">
+          </label>
+          <label class="label">
+            <input type="password" class="input input--sm" name="password" placeholder="Пароль">
+            <button class="btn eye-btn js-eye-btn" type="button"></button>
+          </label>
+          <label class="label">
+            <input type="password" class="input input--sm" name="password__confirm" placeholder="Подтвердить пароль">
+            <button class="btn eye-btn js-eye-btn" type="button"></button>
+            <span class="label__sub">* Пароль должен содержать не менее 8 символов, латинскими буквами, по крайней мере, одну заглавную букву, одну строчную и одну цифру, без специальных символов.</span>
+          </label>
+          <div class="capch">Тут капча</div>
+        </div>
+        <button class="btn btn--primery btn--blc" type="submit">Зарегистрироваться</button>
+      </form>
+      <div class="popup-nav">
+        <button class="btn popup-nav-btn js-sign-in-btn">Войти</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup js-popup" id="js-forgot-pass">
+  <div class="popup__overlay js-close-popup"></div>
+  <div class="popup__main">
+    <div class="popup__header">
+      <button class="btn select-popup__close js-close-popup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1852 15.1865L5.18563 5.18555M15.1852 5.18646L5.18518 15.1865L15.1852 5.18646Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <h2 class="select-popup__title">Забыли пароль?</h2>
+    </div>
+    <div class="popup__content">
+      <div class="popup__txt">Ничего страшного! Мы отправим вам ссылку для смены пароля. Введите адрес электронной почты, с которой вы заходили на TripMe</div>
+      <form action="#" method="post" class="popup-form">
+        <div class="popup-form__main">
+          <label class="label">
+            <input type="email" class="input input--sm" name="login" placeholder="Email">
+          </label>
+          <div class="capch">Тут капча</div>
+        </div>
+        <button class="btn btn--primery btn--blc" type="submit">Отправить ссылку</button>
+      </form>
+      <div class="popup-nav">
+        <div class="popup-nav__row">
+          <button class="btn popup-nav-btn js-sign-in-btn">Войти</button>
+          <button class="btn popup-nav-btn js-sign-up-btn">Регистрация</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup js-popup" id="js-forgot-pass-modal">
+  <div class="popup__overlay js-close-popup"></div>
+  <div class="popup__main">
+    <div class="popup__header">
+      <button class="btn select-popup__close js-close-popup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1852 15.1865L5.18563 5.18555M15.1852 5.18646L5.18518 15.1865L15.1852 5.18646Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <h2 class="select-popup__title">Отправлено письмо</h2>
+    </div>
+    <div class="popup__content">
+      <div class="popup-form">
+        <div class="popup__txt">Мы отправили инструкцию по смене пароля на anyemail@mail.com. Письмо должно прийти через несколько минут</div>  
+      </div>    
+      <div class="popup-nav">
+        <button class="btn btn--primery btn--blc js-close-popup">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popup js-popup" id="js-forgot-pass-confirm">
+  <div class="popup__overlay js-close-popup"></div>
+  <div class="popup__main">
+    <div class="popup__header">
+      <button class="btn select-popup__close js-close-popup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1852 15.1865L5.18563 5.18555M15.1852 5.18646L5.18518 15.1865L15.1852 5.18646Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <h2 class="select-popup__title">Создать новый пароль</h2>
+    </div>
+    <div class="popup__content">
+      <form action="#" method="post" class="popup-form">
+        <div class="popup-form__main">
+          <label class="label">
+            <input type="password" class="input input--sm" name="password" placeholder="Пароль">
+            <button class="btn eye-btn js-eye-btn" type="button"></button>
+          </label>
+          <label class="label">
+            <input type="password" class="input input--sm" name="password__confirm" placeholder="Подтвердить пароль">
+            <button class="btn eye-btn js-eye-btn" type="button"></button>
+            <span class="label__sub">* Пароль должен содержать не менее 8 символов, латинскими буквами, по крайней мере, одну заглавную букву, одну строчную и одну цифру, без специальных символов.</span>
+          </label>
+          <div class="capch">Тут капча</div>
+        </div>
+        <button class="btn btn--primery btn--blc" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="popup js-popup" id="js-select-loc">
+  <div class="popup__overlay js-close-popup"></div>
+  <div class="popup__main">
+    <div class="popup__header">
+      <button class="btn select-popup__close js-close-popup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1852 15.1865L5.18563 5.18555M15.1852 5.18646L5.18518 15.1865L15.1852 5.18646Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <h2 class="select-popup__title">Выберите город</h2>
+    </div>
+    <div class="popup__content">
+      <form action="#" method="post" class="popup-form">
+        <div class="form-sec">
+          <div class="form-sec__title">Нижний Новгород</div>
+          <div class="checklist">
+            <label class="check">
+              <span class="radiobutton">
+                <input type="radio" name="city" checked="">
+                <span></span>
+              </span>
+              <span class="check__txt">ул. Кузбасская 17а</span>
+            </label>
+            <label class="check">
+              <span class="radiobutton">
+                <input type="radio" name="city">
+                <span></span>
+              </span>
+              <span class="check__txt">ул. Кузбасская 17а</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-sec">
+          <div class="form-sec__title">Москва</div>
+          <div class="checklist">
+            <label class="check">
+              <span class="radiobutton">
+                <input type="radio" name="city">
+                <span></span>
+              </span>
+              <span class="check__txt">ул. Мира 10/1</span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

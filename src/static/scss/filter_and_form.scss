@@ -202,10 +202,19 @@
 
 .sort{
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   margin: 24px 0;
   &:first-child{margin-top: 0;}
+  &__rows{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .sort__row:not(:last-child){margin-right: 24px;}
+  }
   &__row{
     display: flex;
     align-items: center;
@@ -218,12 +227,21 @@
     b{font-weight: 500;}
   }
   .styled-select{width: 220px;}
+  @media only screen and (max-width : 1299px){
+    &__rows{
+      display: block;
+      .sort__row:not(:last-child){margin: 0 0 8px;}
+    }
+  }
   @media only screen and (max-width : 767px){
     display: block;
     margin-top: 8px;
     &__row{
       margin-bottom: 8px;
       &:last-child{margin-bottom: 0;}
+    }
+    &__rows{
+      .sort__txt{width: 90px;}
     }
     .styled-select{
       width: auto;

@@ -7,7 +7,7 @@
   &__back{display: none;}
   &__bar{
     width: 275px;
-    &-contr{display: block;}
+    &-contr.mob-popup{display: block;}
   }
   &__main{width: calc(100% - 275px - 24px);}
   &-nav{
@@ -102,10 +102,13 @@
     &__wrap{display: block;}
     &__bar{
       width: 100%;
-      &-contr{display: none;}
+      &-contr.mob-popup{display: none;}
     }
     &__main{width: 100%;}
     &__back{display: flex;}
+    &-nav{
+      ul{border-radius: 0;}
+    }
   }  
 }
 

@@ -451,9 +451,7 @@ img{
   align-items: stretch;
   margin-top: 24px;
   &:first-child{margin-top: 0;}
-  &--3{
-    grid-template-columns: repeat(3, 1fr);
-  }
+  &--3{grid-template-columns: repeat(3, 1fr);}
   &--4{
     grid-template-columns: repeat(4, 1fr);
     &.row-mode{
@@ -469,9 +467,7 @@ img{
     }
   } 
   @media only screen and (max-width : 1299px){
-    &--3{
-      grid-template-columns: repeat(2, 1fr);
-    }
+    &--3{grid-template-columns: repeat(2, 1fr);}
     &--4{
       grid-template-columns: repeat(3, 1fr);
       .banner-item{
@@ -492,7 +488,7 @@ img{
   }
   @media only screen and (max-width: 1023px){
     &--3{
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
     &--5{
       grid-template-columns: repeat(3, 1fr);
@@ -525,6 +521,10 @@ img{
     grid-row-gap: 8px;
     margin-top: 8px;
     &:first-child{margin-top: 0;}
+    &--3{
+      grid-template-columns: repeat(1, 1fr);
+      .item{width: 100%;}
+    }
   }
 }
 .row-mode .grid{

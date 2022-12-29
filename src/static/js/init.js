@@ -280,6 +280,37 @@ let gallerySlider = new Swiper('#js-detail-gallery-slider', {
   },
 });
 
+
+
+//design sliders
+let interiorCarusel = new Swiper('#js-interior-slideshow-carusel', {
+  spaceBetween: 16,
+  slidesPerView: 6,
+  watchSlidesProgress: true,
+  direction: 'vertical',
+});
+let interiorSlider = new Swiper('#js-interior-slideshow-slider', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  thumbs: {
+    swiper: interiorCarusel,
+  },
+  pagination: {
+    el: '#js-interior-slideshow-pagination',
+    clickable: true,
+  },
+  navigation: {
+    prevEl: '#js-interior-slideshow-prev',
+    nextEl: '#js-interior-slideshow-next',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+    },
+  },
+});
+
 let galleryCaruselFast = new Swiper('#js-detail-gallery-carusel-fast', {
   spaceBetween: 16,
   slidesPerView: 6,
