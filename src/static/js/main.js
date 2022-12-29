@@ -319,6 +319,20 @@ $(document).ready(function(){
     }
   }).eq(0).addClass('active');
   
+  //profile nav open
+  $('.js-profile-nav-btn').on('click', function(){
+	$('#js-profile-nav').addClass('open');
+  });
+  
+  //add new address
+  $('.js-show-address-on-map').on('click', function(){
+	$('.my-addresses__hide.open').removeClass('open');
+	$('#js-address-map').addClass('open');
+  });
+  $('.js-show-address-on-fields').on('click', function(){
+	$('.my-addresses__hide.open').removeClass('open');
+	$('#js-address-fields').addClass('open');
+  });
 });
 
 

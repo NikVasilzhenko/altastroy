@@ -225,6 +225,81 @@
     }
   }
   &__more ~ *{display: none;}
+  &__item-header{
+    padding: 16px 0;
+    border-bottom: 1px solid $clr-brd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-bar{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &-item{
+      margin-left: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      line-height: 150%;
+      &-title{
+        margin-right: 6px;        
+        color: $clr-txt-sec;
+      }
+      &-val{
+        color: $clr-txt;
+        white-space: nowrap;
+      }
+    }
+  }
+  &-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    &__pic{
+      width: 50px;
+      flex-shrink: 0;
+      margin-right: 16px;
+    }
+    &__title{
+      font-size: 14px;
+      line-height: 130%;
+      color: $clr-txt-sec;
+    }
+    &__name{
+      font-size: 16px;
+      line-height: 130%;
+      color: $clr-main;
+      &:hover{color: $clr-hover;}
+    }
+    &__id{
+      font-size: 14px;
+      line-height: 130%;
+      color: $clr-txt-sec;
+      span{color: $clr-txt;}
+    }
+  }
+  &__state{
+    padding: 0 6px;
+    display: inline-block;
+    border-radius: 2px;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 150%;
+    &.edit{
+      background-color: $clr-edit;
+      color: $clr-txt;
+    }
+    &.deleted{
+      background-color: $clr-alert;
+      color: $clr-contr;
+    }
+    &.confirmed{
+      background-color: $clr-confirm;
+      color: $clr-contr;
+    }
+  }
   @media only screen and (max-width : 1199px){
     &__gallery{grid-template-columns: repeat(8, 1fr);}
   }
@@ -238,6 +313,22 @@
     &__brif{margin-bottom: 8px;}
     &__main{padding: 16px 0;}
     &__gallery{grid-template-columns: repeat(4, 1fr);}
+    &-item{margin-bottom: 8px;}
+    &__item-header{
+      flex-wrap: wrap;
+      &-item{
+        margin-left: 0;
+        margin-right: 24px;
+        display: block;
+        &:last-child{margin-right: 0;}
+        &-title{margin-bottom: 4px;}
+        &-val{display: block;}
+      }
+    }
+    &__delete{
+      width: 100%;
+      margin-top: 16px;
+    }
   }
 }
 

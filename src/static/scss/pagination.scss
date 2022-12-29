@@ -42,8 +42,8 @@
         user-select: none;
         pointer-events: none;
       }
-      &:first-child{margin-right: 12px;}
-      &:last-child{margin-left: 12px;}
+      &:first-child{margin-right: 8px;}
+      &:last-child{margin-left: 8px;}
     }
   }
   @media only screen and (max-width : 1023px){
