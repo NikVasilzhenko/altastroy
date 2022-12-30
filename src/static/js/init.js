@@ -311,6 +311,150 @@ let interiorSlider = new Swiper('#js-interior-slideshow-slider', {
   },
 });
 
+let sinkCarusel = new Swiper('#js-sink-slideshow-carusel', {
+  spaceBetween: 16,
+  slidesPerView: 6,
+  watchSlidesProgress: true,
+  direction: 'vertical',
+});
+let sinkSlider = new Swiper('#js-sink-slideshow-slider', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  thumbs: {
+    swiper: sinkCarusel,
+  },
+  pagination: {
+    el: '#js-sink-slideshow-pagination',
+    clickable: true,
+  },
+  navigation: {
+    prevEl: '#js-sink-slideshow-prev',
+    nextEl: '#js-sink-slideshow-next',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+    },
+  },
+});
+
+let toiletCarusel = new Swiper('#js-toilet-slideshow-carusel', {
+  spaceBetween: 16,
+  slidesPerView: 6,
+  watchSlidesProgress: true,
+  direction: 'vertical',
+});
+let toiletSlider = new Swiper('#js-toilet-slideshow-slider', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  thumbs: {
+    swiper: toiletCarusel,
+  },
+  pagination: {
+    el: '#js-toilet-slideshow-pagination',
+    clickable: true,
+  },
+  navigation: {
+    prevEl: '#js-toilet-slideshow-prev',
+    nextEl: '#js-toilet-slideshow-next',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+    },
+  },
+});
+
+let bathCarusel = new Swiper('#js-bath-slideshow-carusel', {
+  spaceBetween: 16,
+  slidesPerView: 6,
+  watchSlidesProgress: true,
+  direction: 'vertical',
+});
+let bathSlider = new Swiper('#js-bath-slideshow-slider', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  thumbs: {
+    swiper: bathCarusel,
+  },
+  pagination: {
+    el: '#js-bath-slideshow-pagination',
+    clickable: true,
+  },
+  navigation: {
+    prevEl: '#js-bath-slideshow-prev',
+    nextEl: '#js-bath-slideshow-next',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+    },
+  },
+});
+
+let showerCarusel = new Swiper('#js-shower-slideshow-carusel', {
+  spaceBetween: 16,
+  slidesPerView: 6,
+  watchSlidesProgress: true,
+  direction: 'vertical',
+});
+let showerSlider = new Swiper('#js-shower-slideshow-slider', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  thumbs: {
+    swiper: showerCarusel,
+  },
+  pagination: {
+    el: '#js-shower-slideshow-pagination',
+    clickable: true,
+  },
+  navigation: {
+    prevEl: '#js-shower-slideshow-prev',
+    nextEl: '#js-shower-slideshow-next',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+    },
+  },
+});
+
+let accessoriesCarusel = new Swiper('#js-accessories-slideshow-carusel', {
+  spaceBetween: 16,
+  slidesPerView: 6,
+  watchSlidesProgress: true,
+  direction: 'vertical',
+});
+let accessoriesSlider = new Swiper('#js-accessories-slideshow-slider', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  thumbs: {
+    swiper: accessoriesCarusel,
+  },
+  pagination: {
+    el: '#js-accessories-slideshow-pagination',
+    clickable: true,
+  },
+  navigation: {
+    prevEl: '#js-accessories-slideshow-prev',
+    nextEl: '#js-accessories-slideshow-next',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 24,
+    },
+  },
+});
+
+
+
+
+
 let galleryCaruselFast = new Swiper('#js-detail-gallery-carusel-fast', {
   spaceBetween: 16,
   slidesPerView: 6,
