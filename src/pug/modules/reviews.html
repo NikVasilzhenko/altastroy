@@ -47,7 +47,7 @@
                   </label>
                 </div>
               </div>
-              <button class="btn btn--primery btn--blc" type="submit">Оставить отзыв</button>
+              <button class="btn btn--primery btn--blc js-add-review-btn" type="button">Оставить отзыв</button>
             </form>
           </div>
           <div class="reviews-page__main">
@@ -363,6 +363,72 @@
         </div>
         
       </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="popup js-popup" id="js-add-review">
+  <div class="popup__overlay js-close-popup"></div>
+  <div class="popup__main popup__main--review">
+    <div class="popup__header">
+      <button class="btn select-popup__close js-close-popup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1852 15.1865L5.18563 5.18555M15.1852 5.18646L5.18518 15.1865L15.1852 5.18646Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <h2 class="select-popup__title">Оставить отзыв</h2>
+    </div>
+    <div class="popup__content">
+      <form action="#" method="post" class="popup-form">
+        <div class="popup-form__main">
+          <div class="review__sec-header">
+            <h2 class="review__sec-title">Общая оценка: </h2>
+            <div class="rait-select">
+              <input type="radio" name="rait" id="star-1">
+              <input type="radio" name="rait" id="star-2">
+              <input type="radio" name="rait" id="star-3">
+              <input type="radio" name="rait" id="star-4">
+              <input type="radio" name="rait" id="star-5" checked>
+              <div class="rait-select__list">
+                <label class="rait-select__item" for="star-1">
+                  <img src="img/svg/star-active.svg" alt="">
+                  <img src="img/svg/star.svg" alt="">
+                </label>
+                <label class="rait-select__item" for="star-2">
+                  <img src="img/svg/star-active.svg" alt="">
+                  <img src="img/svg/star.svg" alt="">
+                </label>
+                <label class="rait-select__item" for="star-3">
+                  <img src="img/svg/star-active.svg" alt="">
+                  <img src="img/svg/star.svg" alt="">
+                </label>
+                <label class="rait-select__item" for="star-4">
+                  <img src="img/svg/star-active.svg" alt="">
+                  <img src="img/svg/star.svg" alt="">
+                </label>
+                <label class="rait-select__item" for="star-5">
+                  <img src="img/svg/star-active.svg" alt="">
+                  <img src="img/svg/star.svg" alt="">
+                </label>
+              </div>
+            </div>
+          </div>
+          <label class="label">
+            <textarea class="textarea" name="main_review" placeholder="Ваш отзыв"></textarea>
+          </label>
+          <label class="label">
+            <textarea class="textarea" name="main_review" placeholder="Достоинства"></textarea>
+          </label>
+          <label class="label">
+            <textarea class="textarea" name="main_review" placeholder="Недостатки"></textarea>
+          </label>
+          <label class="label">
+            <textarea class="textarea" name="main_review" placeholder="Комментарий"></textarea>
+          </label>
+        </div>
+        <button class="btn btn--primery btn--blc" type="submit">Опубликовать</button>
+      </form>
     </div>
   </div>
 </div>

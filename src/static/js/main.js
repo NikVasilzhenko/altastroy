@@ -264,6 +264,9 @@ $(document).ready(function(){
     $('.js-popup').fadeOut(300);
     $('#js-select-loc').fadeIn(300);
   });
+  $('.js-add-review-btn').on('click', function(e){
+    $('#js-add-review').fadeIn(300);
+  });
   
   //fast view popup
   $('.js-fast-view').on('click', function(){
@@ -277,13 +280,13 @@ $(document).ready(function(){
       text.text($(this)[0].files[0].name);
       $(this).closest('.file').addClass('value');
     } else{
-      text.text('Прикрепить фото и документы');
+      text.text('Прикрепить файл с резюме');
       $(this).closest('.file').removeClass('value');
     }
   });
   $('#js-file-del').on('click', function(e){
     var text = $('#js-file-name');
-    text.text('Прикрепить фото и документы');
+    text.text('Прикрепить файл с резюме');
     $(this).closest('.file').removeClass('value');
   });
   
