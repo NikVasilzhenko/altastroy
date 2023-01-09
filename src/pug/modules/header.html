@@ -81,10 +81,117 @@
           <span>Каталог</span>
         </button>
         <form action="#" method="get" class="search" id="js-search">
-          <input type="search" name="search" class="input search__input" autocomplete="off" placeholder="Найдём среди 1500 товаров...">
+          <input type="search" name="search" class="input search__input js-search-input" autocomplete="off" placeholder="Найдём среди 1500 товаров...">
           <button class="btn search__submit" type="submit">
             <img src="img/svg/search.svg" alt="">
           </button>
+          <button class="btn search__clear js-search-clear" type="reset">
+            <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.5 21.0012L7.00061 7.5M20.5 7.50123L7 21.0012L20.5 7.50123Z" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="search-drop js-search-drop">
+            <div class="search-history">
+              <div class="search-drop__message">Ваша история поиска пуста</div>              
+              <div class="search-history-item">
+                <div class="search-history-item__txt">Ванна акриловая</div>
+                <button class="btn search-history-item__delete" type="button">Удалить</button>
+              </div>
+              <div class="search-history-item">
+                <div class="search-history-item__txt">Ванна акриловая</div>
+                <button class="btn search-history-item__delete" type="button">Удалить</button>
+              </div>
+              <div class="search-history-item">
+                <div class="search-history-item__txt">Ванна акриловая</div>
+                <button class="btn search-history-item__delete" type="button">Удалить</button>
+              </div>
+              <div class="search-history-item">
+                <div class="search-history-item__txt">Ванна акриловая</div>
+                <button class="btn search-history-item__delete" type="button">Удалить</button>
+              </div>
+              <div class="search-history-item">
+                <div class="search-history-item__txt">Ванна акриловая</div>
+                <button class="btn search-history-item__delete" type="button">Удалить</button>
+              </div>
+              <div class="search-history-item">
+                <div class="search-history-item__txt">Ванна акриловая</div>
+                <button class="btn search-history-item__delete" type="button">Удалить</button>
+              </div>
+              <div class="search-history-item">
+                <div class="search-history-item__txt">Ванна акриловая</div>
+                <button class="btn search-history-item__delete" type="button">Удалить</button>
+              </div>
+              <div class="search-history-item">
+                <div class="search-history-item__txt">Ванна акриловая</div>
+                <button class="btn search-history-item__delete" type="button">Удалить</button>
+              </div>
+              <div class="search-history-item">
+                <div class="search-history-item__txt">Ванна акриловая</div>
+                <button class="btn search-history-item__delete" type="button">Удалить</button>
+              </div>
+              <div class="search-history-item">
+                <div class="search-history-item__txt">Ванна акриловая</div>
+                <button class="btn search-history-item__delete" type="button">Удалить</button>
+              </div>
+              <div class="search-history-item">
+                <div class="search-history-item__txt">Ванна акриловая</div>
+                <button class="btn search-history-item__delete" type="button">Удалить</button>
+              </div>
+              <div class="search-history-item">
+                <div class="search-history-item__txt">Ванна акриловая</div>
+                <button class="btn search-history-item__delete" type="button">Удалить</button>
+              </div>
+            </div>
+           <div class="search-result">
+             <div class="search-drop__message">По Вашему запросу ничего не найдено</div>
+             <div class="search-result__sec">
+               <div class="search-result__header">Товары</div>
+               <div class="search-result__list">
+                 <div class="search-result-item search-result-item--item">
+                   <div class="search-result-item__txt"><mark>Уни</mark>таз напольный Grossman Classic GR-N3012</div>
+                   <div class="search-result-item__sec">16 400 р</div>
+                 </div>
+                 <div class="search-result-item search-result-item--item">
+                   <div class="search-result-item__txt"><mark>Уни</mark>таз напольный Grossman Classic GR-N3012</div>
+                   <div class="search-result-item__sec">16 400 р</div>
+                 </div>
+                 <div class="search-result-item search-result-item--item">
+                   <div class="search-result-item__txt"><mark>Уни</mark>таз напольный Grossman Classic GR-N3012</div>
+                   <div class="search-result-item__sec">16 400 р</div>
+                 </div>
+                 <div class="search-result-item search-result-item--item">
+                   <div class="search-result-item__txt"><mark>Уни</mark>таз напольный Grossman Classic GR-N3012</div>
+                   <div class="search-result-item__sec">16 400 р</div>
+                 </div>
+                 <div class="search-result-item search-result-item--item">
+                   <div class="search-result-item__txt"><mark>Уни</mark>таз напольный Grossman Classic GR-N3012</div>
+                   <div class="search-result-item__sec">16 400 р</div>
+                 </div>
+               </div>
+               <div class="search-result__footer">
+                 <a href="#" class="search-result__link">
+                   <span>Показать все результаты поиска (1 027)</span>
+                   <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M5.79134 3.83366L10.458 8.50033L5.79134 13.167" stroke-linecap="square"/>
+                   </svg>
+                 </a>                 
+               </div>
+             </div>
+             <div class="search-result__sec">
+               <div class="search-result__header">Категории</div>
+               <div class="search-result__list">
+                 <div class="search-result-item search-result-item--cat">
+                   <div class="search-result-item__txt"><mark>Уни</mark>тазы напольные</div>
+                   <div class="search-result-item__sec">1 251 товар</div>
+                 </div>
+                 <div class="search-result-item search-result-item--cat">
+                   <div class="search-result-item__txt"><mark>Уни</mark>тазы напольные</div>
+                   <div class="search-result-item__sec">1 251 товар</div>
+                 </div>
+               </div>
+             </div>
+           </div>
+          </div>
         </form>
         <button class="btn fake-search js-open-search-popup">
           <span>Найдём среди 1500 товаров...</span>
@@ -572,10 +679,117 @@
   </header>
   <div class="mob-popup__main">
     <form action="#" method="get" class="search search--mob" id="js-search-mob">
-      <input type="search" name="search_mob" class="input search__input" autocomplete="off" placeholder="Найдём среди 1500 товаров...">
+      <input type="search" name="search_mob" class="input search__input js-search-input" autocomplete="off" placeholder="Найдём среди 1500 товаров...">
       <button class="btn search__submit" type="submit">
         <img src="img/svg/search.svg" alt="">
       </button>
+      <button class="btn search__clear js-search-clear" type="reset">
+        <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.5 21.0012L7.00061 7.5M20.5 7.50123L7 21.0012L20.5 7.50123Z" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="search-drop js-search-drop">
+        <div class="search-history">
+          <div class="search-drop__message">Ваша история поиска пуста</div>              
+          <div class="search-history-item">
+            <div class="search-history-item__txt">Ванна акриловая</div>
+            <button class="btn search-history-item__delete" type="button">Удалить</button>
+          </div>
+          <div class="search-history-item">
+            <div class="search-history-item__txt">Ванна акриловая</div>
+            <button class="btn search-history-item__delete" type="button">Удалить</button>
+          </div>
+          <div class="search-history-item">
+            <div class="search-history-item__txt">Ванна акриловая</div>
+            <button class="btn search-history-item__delete" type="button">Удалить</button>
+          </div>
+          <div class="search-history-item">
+            <div class="search-history-item__txt">Ванна акриловая</div>
+            <button class="btn search-history-item__delete" type="button">Удалить</button>
+          </div>
+          <div class="search-history-item">
+            <div class="search-history-item__txt">Ванна акриловая</div>
+            <button class="btn search-history-item__delete" type="button">Удалить</button>
+          </div>
+          <div class="search-history-item">
+            <div class="search-history-item__txt">Ванна акриловая</div>
+            <button class="btn search-history-item__delete" type="button">Удалить</button>
+          </div>
+          <div class="search-history-item">
+            <div class="search-history-item__txt">Ванна акриловая</div>
+            <button class="btn search-history-item__delete" type="button">Удалить</button>
+          </div>
+          <div class="search-history-item">
+            <div class="search-history-item__txt">Ванна акриловая</div>
+            <button class="btn search-history-item__delete" type="button">Удалить</button>
+          </div>
+          <div class="search-history-item">
+            <div class="search-history-item__txt">Ванна акриловая</div>
+            <button class="btn search-history-item__delete" type="button">Удалить</button>
+          </div>
+          <div class="search-history-item">
+            <div class="search-history-item__txt">Ванна акриловая</div>
+            <button class="btn search-history-item__delete" type="button">Удалить</button>
+          </div>
+          <div class="search-history-item">
+            <div class="search-history-item__txt">Ванна акриловая</div>
+            <button class="btn search-history-item__delete" type="button">Удалить</button>
+          </div>
+          <div class="search-history-item">
+            <div class="search-history-item__txt">Ванна акриловая</div>
+            <button class="btn search-history-item__delete" type="button">Удалить</button>
+          </div>
+        </div>
+       <div class="search-result">
+         <div class="search-drop__message">По Вашему запросу ничего не найдено</div>
+         <div class="search-result__sec">
+           <div class="search-result__header">Товары</div>
+           <div class="search-result__list">
+             <div class="search-result-item search-result-item--item">
+               <div class="search-result-item__txt"><mark>Уни</mark>таз напольный Grossman Classic GR-N3012</div>
+               <div class="search-result-item__sec">16 400 р</div>
+             </div>
+             <div class="search-result-item search-result-item--item">
+               <div class="search-result-item__txt"><mark>Уни</mark>таз напольный Grossman Classic GR-N3012</div>
+               <div class="search-result-item__sec">16 400 р</div>
+             </div>
+             <div class="search-result-item search-result-item--item">
+               <div class="search-result-item__txt"><mark>Уни</mark>таз напольный Grossman Classic GR-N3012</div>
+               <div class="search-result-item__sec">16 400 р</div>
+             </div>
+             <div class="search-result-item search-result-item--item">
+               <div class="search-result-item__txt"><mark>Уни</mark>таз напольный Grossman Classic GR-N3012</div>
+               <div class="search-result-item__sec">16 400 р</div>
+             </div>
+             <div class="search-result-item search-result-item--item">
+               <div class="search-result-item__txt"><mark>Уни</mark>таз напольный Grossman Classic GR-N3012</div>
+               <div class="search-result-item__sec">16 400 р</div>
+             </div>
+           </div>
+           <div class="search-result__footer">
+             <a href="#" class="search-result__link">
+               <span>Показать все результаты поиска (1 027)</span>
+               <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M5.79134 3.83366L10.458 8.50033L5.79134 13.167" stroke-linecap="square"/>
+               </svg>
+             </a>                 
+           </div>
+         </div>
+         <div class="search-result__sec">
+           <div class="search-result__header">Категории</div>
+           <div class="search-result__list">
+             <div class="search-result-item search-result-item--cat">
+               <div class="search-result-item__txt"><mark>Уни</mark>тазы напольные</div>
+               <div class="search-result-item__sec">1 251 товар</div>
+             </div>
+             <div class="search-result-item search-result-item--cat">
+               <div class="search-result-item__txt"><mark>Уни</mark>тазы напольные</div>
+               <div class="search-result-item__sec">1 251 товар</div>
+             </div>
+           </div>
+         </div>
+       </div>
+      </div>
     </form>
   </div>
 </div>

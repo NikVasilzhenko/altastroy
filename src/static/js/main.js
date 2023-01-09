@@ -71,6 +71,20 @@ $(document).ready(function(){
     $('#js-search-mob-popup').addClass('open');
     $('#js-search-mob input').focus();
   });
+  $('.js-search-input').on('keyup', function(){
+    if($(this).val().trim()){
+      $(this).addClass('open');
+      $('.js-search-drop').scrollTop(0);
+    } else{
+      $(this).removeClass('open');
+      $('.js-search-drop').scrollTop(0);
+    }
+  });
+  $('.js-search-clear').on('click', function(e){
+    e.preventDefault();
+    $('.js-search-input').val('').removeClass('open').focus();
+  });
+  
 
   //open catalog
   $('.js-catalog-btn').on('click', function(){

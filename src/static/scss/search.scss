@@ -7,12 +7,48 @@
     padding: 0 62px;
     border-radius: $brs;
     border: 2px solid $clr-main;
+    &:focus,
+    &.open{
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      & ~ .search-drop{display: block;}
+    }
+    &.open{      
+      & ~ .search-drop .search-history{display: none;}
+      & ~ .search-drop .search-result{display: block;}
+      & ~ .search__clear{display: block;}
+    }
+    &::-ms-clear {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration,
+    &::-webkit-search-cancel-button {display: none;}
   }
   &__submit{
     position: absolute;
     top: 13px;
     left: 14px;
-  }
+  }  
+  &__clear{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 5;
+    display: none;
+    svg{
+      display: block;
+      stroke: $clr-main;
+      transition: stroke .25s;
+    }
+    &:hover{
+      svg{stroke: $clr-hover;}
+    }
+  }  
   @media only screen and (max-width : 1459px){
     margin-left: 12px;
   }
@@ -32,6 +68,150 @@
     &__submit{
       top: 7px;
       left: 12px;
+    }
+    &__clear{top: 10px;}
+  }
+}
+.search-drop{
+  @include scrollbar;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $clr-contr;
+  border: 2px solid $clr-main;
+  border-radius: 0 0 $brs $brs;
+  margin-top: -2px;
+  max-height: 260px;
+  &__message{
+    padding: 16px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  @media only screen and (max-width : 1023px){
+    border: none;
+    border-radius: 0;
+    position: static;
+    margin-top: 0;
+    max-height: unset;
+  }
+}
+.search-history{
+  padding: 8px 0;
+  &-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 24px;
+    transition: background-color .25s;
+    background: url(../img/svg/search-history.svg) 24px center no-repeat;
+    cursor: pointer;
+    &:hover{background-color: #EFDAF5;}
+    &__delete{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $clr-txt-sec;
+      white-space: nowrap;
+      &:hover{color: $clr-hover;}
+    }
+    &__txt{
+      flex-grow: 1;
+      padding: 0 16px 0 36px;      
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 16px;
+      line-height: 19px;
+      color: $clr-txt;
+    }
+  }
+  @media only screen and (max-width : 1023px){
+    &-item{
+      padding: 8px 16px;
+      background-position: 16px center;
+      &__delete{
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        background: url(../img/svg/close.svg) no-repeat;
+      }
+    }
+  }
+}
+.search-result{
+  display: none;
+  padding: 8px 0;
+  &__header{
+    padding: 8px 24px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__footer{padding: 8px 24px 8px 60px;}
+  &__link{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $clr-main;
+    svg{
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin-left: 12px;
+      stroke: $clr-main;
+    }
+    &:hover{
+      color: $clr-hover;
+      svg{stroke: $clr-hover;}
+    }
+  }
+  &-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 8px 24px;
+    transition: background-color .25s;
+    &--item{background: url(../img/svg/search-search.svg) 24px center no-repeat;}    
+    &--cat{background: url(../img/svg/search-list.svg) 24px center no-repeat;}    
+    cursor: pointer;
+    &:hover{color: $clr-main;}
+    &__txt{
+      flex-grow: 1;
+      padding: 0 16px 0 36px;      
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 16px;
+      line-height: 19px;
+      color: $clr-txt;
+      &:hover{color: $clr-main;}
+      mark{
+        font-weight: 600;
+        background-color: $clr-edit;
+      }
+    }
+    &__sec{
+      color: $clr-txt-sec;
+      font-size: 14px;
+      line-height: 19px;
+      white-space: nowrap;
+    }
+  }
+  @media only screen and (max-width : 1023px){
+    &__header,
+    &__footer{padding: 8px 16px;}
+    &-item{
+      padding: 8px 16px;
+      background-position: 16px center;
     }
   }
 }
