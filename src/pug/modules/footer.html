@@ -128,3 +128,37 @@
     </div>
   </div>
 </footer>
+<div class="popup js-popup" id="js-order-form">
+  <div class="popup__overlay js-close-popup"></div>
+  <div class="popup__main">
+    <div class="popup__header">
+      <button class="btn select-popup__close js-close-popup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1852 15.1865L5.18563 5.18555M15.1852 5.18646L5.18518 15.1865L15.1852 5.18646Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <h2 class="select-popup__title">Заказать звонок</h2>
+    </div>
+    <div class="popup__content">
+      <form action="#" method="post" class="popup-form">
+        <div class="popup-form__main">
+          <label class="label">
+            <input type="tel" class="input input--sm" name="tel" required placeholder="Телефон*">
+          </label>
+          <label class="label">
+            <input type="text" class="input input--sm" name="name" placeholder="Ваше имя">
+          </label>
+          <label class="label">
+            <input type="text" class="input input--sm" name="time" placeholder="Удобное время для звонка">
+          </label>
+          <label class="label">
+            <textarea class="input textarea" name="text" placeholder="Сообщение"></textarea>
+            <span class="label__sub">Менеджер перезвонит Вам в удобное для Вас время</span>
+          </label>
+        </div>
+        <div class="subscribe-form__sub">Нажимая на кнопку, я даю согласие на обработку <a href="#">персональных данных</a></div>
+        <button class="btn btn--primery btn--blc" type="submit">Заказать</button>
+      </form>
+    </div>
+  </div>
+</div>

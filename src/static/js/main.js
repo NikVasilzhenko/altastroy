@@ -281,6 +281,10 @@ $(document).ready(function(){
   $('.js-add-review-btn').on('click', function(e){
     $('#js-add-review').fadeIn(300);
   });
+  $('.js-order-btn').on('click', function(e){
+    e.preventDefault();
+    $('#js-order-form').fadeIn(300);
+  });
   
   //fast view popup
   $('.js-fast-view').on('click', function(){
