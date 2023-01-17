@@ -8,8 +8,10 @@
     margin: 0 !important;
     &--landscape{
       width: 29.7cm;
-      height: 21cm; 
-      max-height:  21cm; 
+//      height: 21cm; 
+//      max-height:  21cm; 
+      height: auto;
+      max-height: unset;
     }
   }
   &__grid{
@@ -29,7 +31,7 @@
     }
     &.page-a4__wrpa--landscape{
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      .page-tag{height: 10.49cm;}
     }
   }
   &__row{
