@@ -1,4 +1,4 @@
-.page-a4{
+.page-a4{ 
   &__wrpa{
     width: 21cm;
     height: 29.65cm; 
@@ -6,12 +6,17 @@
     background-color: $clr-brd;    
     overflow: hidden;
     margin: 0 !important;
+    &--landscape{
+      width: 29.7cm;
+      height: 21cm; 
+      max-height:  21cm; 
+    }
   }
   &__grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1px;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 1px;
     align-items: stretch;   
     &--whithout-price{
@@ -20,7 +25,11 @@
         flex-grow: 1;
       }
       .page-tag__qr,
-      .page-tag__codes{width: 140px;}
+      .page-tag__codes{width: 160px;}
+    }
+    &.page-a4__wrpa--landscape{
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
     }
   }
   &__row{
@@ -76,6 +85,7 @@
     }    
   }
 }
+
 
 .page-tag{
   height: 100%;
@@ -158,12 +168,12 @@
   }
 }
 @media print {
+  //@page {size: landscape}
   .page-a4__wrpa{
     background-color: $clr-brd;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     margin: 0 !important;
-    overflow: hidden;
     page-break-before: always;
   }
   .page-a4__row{
@@ -174,4 +184,5 @@
     print-color-adjust: exact;
   }
   .page-tag__code span, .page-tag__item span, .page-tag__old-price{color: $clr-txt-sec;}
+  .page-tag{page-break-inside: avoid;}
 }
