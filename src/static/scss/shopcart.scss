@@ -90,7 +90,9 @@
       }
       .detail-asaid-calc__numb{margin-right: 0;}
     }
-    &__price{      
+    &__price{  
+      width: 160px;
+      max-width: 100%;
       &-row{
         display: flex;
         align-items: center;

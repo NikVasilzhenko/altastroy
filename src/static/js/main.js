@@ -362,6 +362,12 @@ $(document).ready(function(){
   $('#js-design-nav ul li a').on('click', function(){
     $('#js-design-nav').removeClass('open');
   });
+  
+  //
+  //accordion switcher
+  $('.js-collection-drop').on('click', function(){
+    $(this).toggleClass('open').closest('.js-collection-header').next().slideToggle(300);
+  });
 });
 
 

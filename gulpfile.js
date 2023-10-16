@@ -6,17 +6,13 @@ var gulp = require('gulp'), // сам gulp
     browserSync = require('browser-sync').create(), //синхронизация с браузером
     notify = require('gulp-notify'), //вывод ошибок в консоль терминала
     plumber = require('gulp-plumber'), //поиск ошибок
-    sass = require('gulp-sass'), // компилятор sass
-    tingpng = require('gulp-tinypng'), // оптимизация png и jpg
+    sass = require('gulp-sass')(require('sass')), // компилятор sass
     sourcemaps = require('gulp-sourcemaps'), // карта минифицированного файла
     autoprefixer = require('gulp-autoprefixer'), // автопрефиксер
     csso = require('gulp-csso'), //очистка и минификация
     concat = require('gulp-concat'), //объединение и минификация js
     replace = require('gulp-replace'),
-    pug = require('gulp-pug'), // компилятор pug
-    iconfont = require('gulp-iconfont'),
-    iconfontCss = require('gulp-iconfont-css-with-types'),
-    fontName = 'iconfont';
+    pug = require('gulp-pug');
 
 /*таски*/
 
@@ -24,7 +20,7 @@ var gulp = require('gulp'), // сам gulp
 gulp.task('serve', function(){
   browserSync.init({
     server: {
-	 baseDir: './build'
+	    baseDir: './build'
     }
   });
 });
@@ -78,7 +74,9 @@ gulp.task('vendors', function(){
     'node_modules/inputmask/dist/inputmask.js',
     'node_modules/just-validate/dist/js/just-validate.js',
     'node_modules/swiper/swiper-bundle.js',
-    'src/static/js/jquery.fancybox.js'
+    'src/static/js/jquery.fancybox.js',
+    'src/static/js/jquery-ui.js',
+    'src/static/js/jquery.ui.touch-punch.js'
   ])
     .pipe(concat('vendors.min.js'))
     .pipe(gulp.dest('build/js/')) //директория куда складывать скомпилированые файлы
@@ -98,13 +96,6 @@ gulp.task('scripts', function(){
     .pipe(browserSync.reload({
       stream: true
     }));
-});
-
-//таск imgOptimiz
-gulp.task('imgOptimiz', function(){
-  return gulp.src('src/static/img/pic/**/*')
-    .pipe(tingpng('hwgYyJfq6xpD48zZDrzwQ4tnrTK2JDKj'))
-    .pipe(gulp.dest('build/img/pic/'))
 });
 
 //таск pic, favicon, og, svg
@@ -146,24 +137,6 @@ gulp.task('fonts', function() {
   }));
 });
 
-//таск iconfont
-gulp.task('iconfont', function(){
-  return gulp.src(['src/static/img/iconfont/*.svg'])
-    .pipe(iconfontCss({
-      path: 'src/static/scss/_icons_template.scss',
-      fontName: fontName,
-      targetPath: '../scss/_icons.scss',
-      fontPath: '../fonts/'
-    }))
-    .pipe(iconfont({
-      fontName: fontName
-    }))
-    .pipe(gulp.dest('src/static/fonts/'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-}, ['fonts', 'sass']);
-
 //таск watch
 gulp.task('watch', function() {
   gulp.watch('src/pug/**/*', gulp.series('pug'));
@@ -179,7 +152,6 @@ gulp.task('watch', function() {
 
 //дефолтный таск, запускаемый по команде gulp
 gulp.task('default', gulp.series(
-  gulp.parallel('iconfont'), //параллельный запуск тасков
   gulp.parallel('pug', 'sass', 'vendors', 'scripts', 'pic', 'favicon', 'og', 'svg', 'fonts'), //параллельный запуск тасков
   gulp.parallel('watch', 'serve') //параллельный запуск тасков после выполнения предыдущих
 ));

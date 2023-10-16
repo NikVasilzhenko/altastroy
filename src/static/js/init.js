@@ -558,4 +558,36 @@ $(document).ready(function(){
     
 //    zenscroll.to(about, 0, -550, console.log('222'));
   });
+  
+  //slider
+  $('.js-slider-range-container').each(function(){
+    let $thisSliderContainer = $(this),
+        $thisSlider = $(this).find('.js-slider-range'),
+        $thisSliderValue = $(this).find('.js-slider-value'),
+        $thisMin  = +($thisSliderContainer.attr('data-min')),
+        $thisMax  = +($thisSliderContainer.attr('data-max')),
+        $thisStep = +($thisSliderContainer.attr('data-step')),
+        $thisMinVal  = +($thisSliderValue.eq(0).val()),
+        $thisMaxVal  = +($thisSliderValue.eq(1).val()),   
+        $thisHandle1  = $(this).find('.js-slider-range__handle-1'),   
+        $thisHandle2  = $(this).find('.js-slider-range__handle-2');   
+    
+    $thisSlider.slider({
+      range: true,
+      min: $thisMin,
+      max: $thisMax,
+      step: $thisStep,
+      values: [$thisMinVal, $thisMaxVal],
+      slide: function( event, ui ) {        
+        for (var i = 0; i < ui.values.length; ++i) {
+          $thisSliderContainer.find(".js-slider-value[data-index=" + i + "]").val(ui.values[i]);
+        }
+      }
+    });
+    
+    $thisSliderValue.change(function() {
+      let $this = $(this);
+      $thisSlider.slider("values", $this.data("index"), $this.val());
+    });        
+  });
 });
