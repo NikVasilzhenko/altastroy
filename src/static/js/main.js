@@ -368,6 +368,11 @@ $(document).ready(function(){
   $('.js-collection-drop').on('click', function(){
     $(this).toggleClass('open').closest('.js-collection-header').next().slideToggle(300);
   });
+  
+  //map-popup
+  $('.js-map-btn').on('click', function(){
+    $('#js-map-popup').fadeIn(300);
+  });
 });
 
 

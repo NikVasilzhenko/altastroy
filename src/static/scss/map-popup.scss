@@ -1,0 +1,27 @@
+.map-popup{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  &__form{
+    width: 320px;
+    padding: 24px;
+    border-right: 1px solid #eaeaea;
+  }
+  &__map{
+    flex-grow: 1;
+    min-height: 400px;
+  }
+  @media only screen and (max-width : 1023px){
+    flex-direction: column-reverse;
+    height: 100%;
+    &__form{
+      width: 100%;
+      padding: 16px 16px 24px;
+      border-top: 1px solid #eaeaea;
+      border-right: none;
+    }
+    &__map{
+      min-height: unset;
+    }
+  }
+}

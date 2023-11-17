@@ -117,7 +117,7 @@
                     <form action="#" method="post" class="form">
                       <div class="form__header">
                         <h3 class="form__title">Выбрать адрес доставки</h3>
-                        <button class="btn form__header-btn">Указать на карте</button>
+                        <button class="btn form__header-btn js-map-btn" type="button">Указать на карте</button>
                       </div>
                       <div class="checklist">
                         <label class="check">
@@ -345,6 +345,31 @@
     </div>
   </div>
 </div>
+<div class="popup popup--long js-popup" id="js-map-popup">
+  <div class="popup__overlay js-close-popup"></div>
+  <div class="popup__main">
+    <div class="popup__header">
+      <button class="btn select-popup__close js-close-popup">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1852 15.1865L5.18563 5.18555M15.1852 5.18646L5.18518 15.1865L15.1852 5.18646Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <h2 class="select-popup__title">Укажите адрес</h2>
+    </div>
+    <div class="popup__content popup__content--no-padding">
+      <div class="map-popup">
+        <form action="#" method="get" class="map-popup__form">          
+          <textarea class="input textarea" name="text" placeholder="Введите адрес"></textarea>
+          <button class="btn btn--primery btn--blc" type="submit">Заказать</button>
+        </form>
+        <div class="map-popup__map" id="js-popup-map">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="https://api-maps.yandex.ru/2.1/?load=package.standard,package.geoObjects&lang=ru-RU&scroll=true"></script>
 <script>
   if (document.documentElement.clientWidth >= 768){
@@ -367,4 +392,24 @@
       };
    });
   }
+</script>
+<script>
+    window.addEventListener("DOMContentLoaded", function(){
+      ymaps.ready(init);
+      function init() {
+        var mapPopup = new ymaps.Map('js-popup-map', {
+            center: [55.744647, 37.552157],
+            zoom: 16,
+            controls: []
+        });
+        var myPlacemark = new ymaps.GeoObject({
+          geometry: {
+              type: "Point",
+              coordinates: [55.744647, 37.552157]
+          }
+        });
+        mapPopup.geoObjects.add(myPlacemark);
+        mapPopup.behaviors.disable('scrollZoom');
+      };
+   });
 </script>
