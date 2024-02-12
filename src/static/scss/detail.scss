@@ -555,6 +555,9 @@
     z-index: 10;
     top: 40px;
     right: 40px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
   }
   &__flag{
     width: 48px;
