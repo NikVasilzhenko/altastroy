@@ -116,6 +116,18 @@
       background: linear-gradient(90deg, #3B5998 0%, #2A365F 100%);
       &::before{background-image: url(../img/svg/flag-discount.svg);}
     }
+    &--sell{
+      background: linear-gradient(90deg, #D45745 0%, #A5001C 100%);
+      &::before{background-image: url(../img/svg/flag-sell.svg);}
+    }
+    &--gift{
+      background: linear-gradient(90deg, #FFAA00 0%, #FC8507 100%);
+      &::before{background-image: url(../img/svg/flag-gift.svg);}
+    }
+    &--plumbing{
+      background: linear-gradient(90deg, #408CCB 0%, #25356F 100%);
+      &::before{background-image: url(../img/svg/flag-plumbing.svg);}
+    }
   }
   &__right-bar{
     position: absolute;
