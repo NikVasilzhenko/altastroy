@@ -270,7 +270,8 @@ img{
     background-color: $clr-main;
   }
   @media only screen and (max-width : 767px){
-    font-size: 36px;
+//    font-size: 36px;
+    font-size: 24px;
   }
 }
 .sec-txt{
@@ -288,6 +289,9 @@ img{
   margin-bottom: 48px;
   @media only screen and (max-width : 1023px){
     .more-link{display: none;}
+  }
+  @media only screen and (max-width : 767px){
+    margin-bottom: 28px;
   }
 }
 .more-link{
@@ -430,7 +434,7 @@ img{
   }
   @media only screen and (max-width : 767px){
     padding-bottom: 50px;
-    &-title{font-size: 28px;}
+    &-title{font-size: 24px;}
     &-header{
       &__wrap{display: block;}   
       &__logo{

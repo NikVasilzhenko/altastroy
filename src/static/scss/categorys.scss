@@ -102,7 +102,6 @@
       left: 46px;
       padding-top: 0;
       height: 56px;
-      background-image: url(../img/pic/category-item-mob.jpg) !important;
       background-size: cover;
       &::before,
       &::after{display: none;}
@@ -113,8 +112,8 @@
       left: 98px;
       width: calc(100% - 98px);
       font-weight: 500;
-      font-size: 14px;
-      line-height: 18px;
+      font-size: 16px;
+      line-height: 1.25;
       transform: translateY(-50%);
       padding-right: 48px;
       br{display: none;}
@@ -140,7 +139,17 @@
     &:hover{
       .category-item__pic{transform: scale(1);}
     }
+    &:nth-child(4n+1) .category-item__bg{background-image: url(../img/pic/category-item-mob-1-min.jpg);}
+    &:nth-child(4n+2) .category-item__bg{background-image: url(../img/pic/category-item-mob-2-min.jpg);}
+    &:nth-child(4n+3) .category-item__bg{background-image: url(../img/pic/category-item-mob-3-min.jpg);}
+    &:nth-child(4n+4) .category-item__bg{background-image: url(../img/pic/category-item-mob-4-min.jpg);}
   }
+}
+.swiper-slide{
+  &:nth-child(4n+1) .category-item__bg{background-image: url(../img/pic/cat-bg-1-min.png);}
+  &:nth-child(4n+2) .category-item__bg{background-image: url(../img/pic/cat-bg-2-min.png);}
+  &:nth-child(4n+3) .category-item__bg{background-image: url(../img/pic/cat-bg-3-min.png);}
+  &:nth-child(4n+4) .category-item__bg{background-image: url(../img/pic/cat-bg-4-min.png);}
 }
 .carusel{  
   @media only screen and (max-width : 1023px){
