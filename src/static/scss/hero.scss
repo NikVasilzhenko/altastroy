@@ -8,8 +8,7 @@
   }
   .slider__footer{margin-top: 24px;}
   @media only screen and (max-width : 767px){
-    width: calc(100% + 32px);
-    margin-left: -16px;
+    .container{padding: 0;}
     picture{border-radius: 0;}
   }  
 }

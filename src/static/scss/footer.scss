@@ -127,6 +127,15 @@
       }
     }
   }
+  &__bottom{
+    small{
+      font-size: 12px;
+      line-height: 1.5;
+      color: #7b7b7b;
+      padding-bottom: 24px;
+      display: block;
+    }
+  }
   @media only screen and (max-width : 1023px){
     &__main{padding: 32px 0;}
     &__wrap{display: block;}
@@ -140,7 +149,7 @@
     &__sec{margin-top: 0;}
     &-nav{display: none;}
     &-contact{ margin: 0;}
-    &__row{padding-bottom: 90px;}
+    &__row{padding-bottom: 24px;}
     &__links{
       flex-grow: 1;
       display: flex;
@@ -154,6 +163,12 @@
       }
     }
     &-btn{display: none;}
+    &__bottom{
+      small{
+        padding-bottom: 76px;
+        text-align: center;
+      }
+    }
   }
   @media only screen and (max-width : 767px){
     &__col{
