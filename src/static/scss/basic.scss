@@ -657,6 +657,20 @@ img{
   }
 }
 
+@media only screen and (max-width : 1023px){
+  .b24-widget-button-position-bottom-right{
+    right: 10px !important;
+    bottom: 70px !important;
+  }
+  
+  ._mobileOffsetBottom_b67f{
+    margin-bottom: 70px !important;
+  }
+  ._orientationLeft_c197 .button_abe7{
+    margin-left: 12px !important;
+  }
+}
+
 
 
 

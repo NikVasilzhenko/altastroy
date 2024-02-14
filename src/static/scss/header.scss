@@ -166,7 +166,10 @@
   }
   @media only screen and (max-width : 1023px){
     &:not(.header-nav--mob){display: none;}
-    &--mob{display: block;}
+    &--mob{
+      display: block;
+      padding-bottom: 40px;
+    }
     & > ul{
       display: block;
       & > li{
