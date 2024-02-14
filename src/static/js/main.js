@@ -89,6 +89,7 @@ $(document).ready(function(){
   //open catalog
   $('.js-catalog-btn').on('click', function(){
     $('#js-catalog-btn').add('#js-header-sticky').toggleClass('open');
+    $('body').toggleClass('no-scroll');
     $('#js-desctop-catalog').slideToggle(250);
   });
   
