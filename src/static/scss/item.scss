@@ -743,10 +743,12 @@
         width: 100%;
         .swiper-wrapper{
           .swiper-slide{
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 0 0 26px;            
+            a{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
             img{
               height: auto;
               position: static;
