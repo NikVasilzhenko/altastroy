@@ -629,7 +629,8 @@
 .detail-param{
   margin-bottom: 12px;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
+  gap: 12px;
   justify-content: space-between;
   border-bottom: 1px dotted #d9d9d9;
   &__val,
@@ -640,6 +641,7 @@
     align-items: center;
     font-size: 14px;
     line-height: 130%;
+    text-align: right;
     a{
       color: $clr-main;
       text-decoration: underline;

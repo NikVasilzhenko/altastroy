@@ -738,10 +738,22 @@
       min-height: unset;
       display: block;
       &__pic{
-        height: 210px;
+        height: auto;
+        min-height: unset;
         width: 100%;
         .swiper-wrapper{
-          .swiper-slide{padding: 16px 12px 24px;}
+          .swiper-slide{
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+              height: auto;
+              position: static;
+              transform: none;
+              max-height: 320px;
+            }
+          }
         }
       }
       &__left-bar{
