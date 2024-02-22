@@ -198,6 +198,7 @@ $(document).ready(function(){
   //mob filter
   $('.js-filter-btn').on('click', function(){  
     $('#js-folter').toggleClass('open');
+    $('body').toggleClass('no-scroll');
   })
   
   //brend nav more
@@ -364,7 +365,6 @@ $(document).ready(function(){
     $('#js-design-nav').removeClass('open');
   });
   
-  //
   //accordion switcher
   $('.js-collection-drop').on('click', function(){
     $(this).toggleClass('open').closest('.js-collection-header').next().slideToggle(300);
@@ -374,6 +374,19 @@ $(document).ready(function(){
   $('.js-map-btn').on('click', function(){
     $('#js-map-popup').fadeIn(300);
   });
+  
+  //top-filter
+  $('.js-top-filter-btn').on('click', function(){
+    $(this).closest('.js-top-filter-sec').toggleClass('open');
+    $('#js-top-filter-overlay').toggleClass('open');
+  })
+  $('#js-top-filter-overlay').on('click', function(){
+    $('.js-top-filter-sec.open').removeClass('open');
+    $(this).removeClass('open');
+  })
+  $('.js-top-filter-back').on('click', function(){
+    $('.js-top-filter-sec.open').removeClass('open');
+  })
 });
 
 

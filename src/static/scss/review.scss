@@ -106,12 +106,44 @@
   margin-bottom: 24px;
   padding: 0 16px;
   &:last-child{margin-bottom: 0;}
+//  &--yandex{
+//    position: relative;
+//    &::before{
+//      content: '';
+//      display: block;
+//      position: absolute;
+//      background: url(https://yastatic.net/s3/frontend/ugc-pages/_/2javW34A.svg) center center no-repeat;
+//      background-size: contain;
+//      width: 82px;
+//      height: 24px;
+//      top: -12px;
+//      left: -10px;
+//    }
+//  }
+  &--yandex{
+    .review__profile{
+      position: relative;
+      &::before{
+        content: '';
+        display: block;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48.093' height='48.052'%3E%3Cpath fill='%23fff' d='M11.64 9.054h24.574v29.748H11.64z'/%3E%3Cpath fill='%23fc3f1d' d='M24.07-.12C10.78-.12 0 10.62 0 23.82c0 13.24 10.78 23.95 24.07 23.95 13.24 0 24.02-10.71 24.02-23.95 0-13.2-10.78-23.94-24.02-23.94Zm3.11 38.17V13.41h-2.21c-4.06 0-6.19 2.05-6.19 5.08 0 3.45 1.47 5.04 4.51 7.09l2.5 1.69-7.22 10.78H13.2l6.48-9.64c-3.73-2.66-5.82-5.25-5.82-9.63 0-5.5 3.81-9.23 11.07-9.23h7.21v28.5Z'/%3E%3C/svg%3E") center center no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: -8px;
+        left: -8px;
+      }
+    }
+  }
   &__header{
     padding: 16px 0;
     border-bottom: 1px solid $clr-brd;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    position: relative;
   }
   &__profile{
     display: flex;
@@ -153,6 +185,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  &__subject{
+    font-size: 14px;
+    font-weight: 400;
+    a{
+      font-weight: 500;
+      color: #455999;
+      &:hover{color: #52006c;}
+    }
   }
   &__brif{
     display: flex;
