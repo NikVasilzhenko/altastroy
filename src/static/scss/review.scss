@@ -106,20 +106,6 @@
   margin-bottom: 24px;
   padding: 0 16px;
   &:last-child{margin-bottom: 0;}
-//  &--yandex{
-//    position: relative;
-//    &::before{
-//      content: '';
-//      display: block;
-//      position: absolute;
-//      background: url(https://yastatic.net/s3/frontend/ugc-pages/_/2javW34A.svg) center center no-repeat;
-//      background-size: contain;
-//      width: 82px;
-//      height: 24px;
-//      top: -12px;
-//      left: -10px;
-//    }
-//  }
   &--yandex{
     .review__profile{
       position: relative;

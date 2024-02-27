@@ -138,8 +138,20 @@ $(document).ready(function(){
   })
   
   //accordion
-  $('.js-accordion-btn').on('click', function(){    
-    $(this).toggleClass('open').next().slideToggle(250);
+  $('.js-accordion-btn').on('click', function(){ 
+    if($(window).width() < 1024){
+      $(this).toggleClass('open');
+      $('body').toggleClass('no-scroll');
+    } else{
+      $(this).toggleClass('open').next().slideToggle(250);
+    }    
+  })
+  
+  
+  
+  
+  $('.js-filter-bar-back').on('click', function(){
+    $('.js-accordion-btn.open').removeClass('open');
   })
   if($(window).width() < 1024){
     $('.js-accordion-mob').on('click', function(){    
