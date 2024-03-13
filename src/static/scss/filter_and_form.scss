@@ -688,21 +688,32 @@ div.same-as-selected{color: $clr-main;}
   &__input{
     height: 40px;
     padding: 0 14px;
+    background: url(../img/svg/search.svg) right 14px center no-repeat;
+    background-size: 16px 16px;
+//    &::-webkit-search-decoration,
+//    &::-webkit-search-cancel-button,
+//    &::-webkit-search-results-button,
+//    &::-webkit-search-results-decoration {
+//      display: none;
+//    }
+    &:valid{
+      background-image: none;
+    }
   }
-  &::before{
-    content: '';
-    display: block;
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 16px;
-    height: 16px;
-    background: url(../img/svg/search.svg) center center no-repeat;
-    background-size: contain;
-    z-index: 3;
-    user-select: none;
-    pointer-events: none;
-  }
+//  &::before{
+//    content: '';
+//    display: block;
+//    position: absolute;
+//    top: 12px;
+//    right: 12px;
+//    width: 16px;
+//    height: 16px;
+//    background: url(../img/svg/search.svg) center center no-repeat;
+//    background-size: contain;
+//    z-index: 3;
+//    user-select: none;
+//    pointer-events: none;
+//  }
 }
 .filter-brends{
   max-height: 554px;
