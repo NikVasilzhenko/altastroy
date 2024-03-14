@@ -141,6 +141,7 @@ $(document).ready(function(){
   $('.js-accordion-btn').on('click', function(){ 
     if($(window).width() < 1024){
       $(this).toggleClass('open');
+      $(this).toggleClass('open').next().slideToggle(250);
       $('body').toggleClass('no-scroll');
     } else{
       $(this).toggleClass('open').next().slideToggle(250);
